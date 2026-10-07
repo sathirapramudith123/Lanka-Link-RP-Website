@@ -1,6 +1,6 @@
 export const site = {
   projectId: "Lanak Link",
-  title: "Explainable AI for SME Credit & Agency Banking Risk Management", // TODO: Real project title
+  title: "Simulated Agency Banking and Smart Procument", // TODO: Real project title
   subtitle:
     "A machine learning research project combining credit readiness scoring, demand forecasting, procurement risk, and agency banking analytics — each explained with SHAP.", // TODO: Real subtitle
   module: "Research Project", // TODO: e.g. "IT4010 - Research Project"
@@ -204,7 +204,7 @@ export const presentations = [
   },
   {
     title: "Lanak Link PP2",
-    subtitle: "Integration, Explainability and Dashboards", // TODO
+    subtitle: "Integration, Explainability and Dashboards", 
     tag: "Progress Presentation 2",
     status: "available",
     desc: "Covers integrating all four ML components, SHAP explainability layer, dashboards, testing progress, and evaluation preparation.", // TODO
@@ -216,7 +216,7 @@ export const presentations = [
   },
   {
     title: "Lanak Link Final",
-    subtitle: "Final Research Presentation", // TODO
+    subtitle: "Final Research Presentation",
     tag: "Final Presentation",
     status: "upcoming",
     desc: "Final research presentation slide deck covering the completed Lanak Link system, evaluation results, conclusions, and future enhancements. This is currently upcoming.", // TODO
@@ -228,9 +228,9 @@ export const presentations = [
   },
 ];
 export const contact = {
-  generalEmail: "team@example.com", // TODO: Real team email
-  supervisorEmail: "shanta.y@sliit.lk", // TODO: Real supervisor email (kept in sync with team.supervisors[0].email)
-  institution: "Sri Lanka Institute of Information Technology (SLIIT)", // TODO
+  generalEmail: "lanaklink.team@example.com",
+  supervisorEmail: "shanta.y@sliit.lk", 
+  institution: "Sri Lanka Institute of Information Technology (SLIIT)", 
   subjects: [
     "General Inquiry",
     "Collaboration",
