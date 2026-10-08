@@ -347,8 +347,8 @@ export const documentSections = [
         tag: "Research Paper",
         status: "upcoming", // "available" | "upcoming"
         actionLabel: "Open PDF",
-        openHref: "", // TODO: Google Drive "view" link
-        downloadHref: "", // TODO: Google Drive "download" link
+        openHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/view?usp=drive_link", // TODO: Google Drive "view" link
+        downloadHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/download?usp=drive_link", // TODO: Google Drive "download" link
       },
     ],
   },
