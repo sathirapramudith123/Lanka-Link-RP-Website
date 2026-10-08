@@ -4,7 +4,7 @@
   <img alt="HTML5" src="https://img.shields.io/badge/HTML5-Website-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img alt="CSS3" src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img alt="No JavaScript" src="https://img.shields.io/badge/JavaScript-None-lightgrey?style=for-the-badge">
-  <img alt="Size" src="https://img.shields.io/badge/Size-8.6%20MB%20%2F%2020%20MB-success?style=for-the-badge">
+  <img alt="Size" src="https://img.shields.io/badge/Size-8.3%20MB%20%2F%2020%20MB-success?style=for-the-badge">
   <img alt="SLIIT" src="https://img.shields.io/badge/SLIIT-R26--IT--139-purple?style=for-the-badge">
 </p>
 
@@ -24,7 +24,7 @@ It is built to the **SLIIT research-website guideline**:
 | Guideline requirement | This website |
 | --- | --- |
 | Technology: WordPress, HTML, CSS | Plain **HTML + CSS** — no JavaScript, no framework, no server |
-| Disk space: maximum 20 MB | **8.6 MB** |
+| Disk space: maximum 20 MB | **8.3 MB** |
 | Tabs: Home, Domain, Milestones, Documents, Presentations, About us, Contact us | ✅ all seven, same navigation on every page |
 
 ---
@@ -59,8 +59,8 @@ Lanka-Link-RP-Website/
 │   │
 │   ├── css/
 │   │   └── style.css         the only stylesheet
-│   ├── fonts/                web fonts (.woff2) used by style.css
 │   ├── images/               team and supervisor photos (.jpg)
+│   │   └── diagrams/         the six system diagrams (.png)
 │   ├── presentations/        slide decks (.pptx)
 │   ├── favicon.ico
 │   └── favicon.svg
@@ -93,11 +93,11 @@ Then open <http://localhost:8080>. Stop the server with `Ctrl + C`.
 
 ## ⬆️ Uploading to the Course Web
 
-1. Upload **everything inside** `static-site/` — the `.html` files and the `css/`, `fonts/`, `images/` and `presentations/` folders.
+1. Upload **everything inside** `static-site/` — the `.html` files and the `css/`, `images/` and `presentations/` folders.
 2. Keep the folder structure as it is — the pages refer to `css/style.css`, `images/…` and so on.
 3. The start page is `index.html`.
 
-Total size: **8.6 MB** of the 20 MB allowed.
+Total size: **8.3 MB** of the 20 MB allowed.
 
 ---
 
@@ -120,6 +120,7 @@ The **navigation bar and footer are repeated on every page** — when you change
 | --- | --- |
 | Phone menu (☰) | a hidden checkbox and its `<label>` — CSS shows the menu when it is checked |
 | Milestone drop-down | a CSS menu that opens on hover / tap; each assessment links to a `#panel`, and `:target` shows it |
+| Milestone filter (All / Completed / Upcoming) | radio buttons and their labels — CSS hides the other cards |
 | Contact form | a normal `<form action="mailto:…">` — the visitor's e-mail program sends the message |
 
 ---
@@ -128,9 +129,9 @@ The **navigation bar and footer are repeated on every page** — when you change
 
 * **HTML5** — the seven pages
 * **CSS3** — one stylesheet (`css/style.css`), responsive for phone, tablet and desktop
-* **SVG** — the system diagrams on the Domain page are drawn inline in the HTML
+* **Google Fonts** — Inter and Space Grotesk (the pages fall back to system fonts when offline)
 
-The pages were first designed with Next.js and Tailwind CSS, then exported to plain HTML and CSS to meet the course-web rules. Only the exported HTML / CSS is kept in this repository.
+Dark navy theme with blue / green accents, a faint grid background and card-based layout. Every page shares the same header, navigation and footer.
 
 ---
 

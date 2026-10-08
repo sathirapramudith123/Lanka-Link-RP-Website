@@ -1,974 +1,217 @@
-<!doctype html>
-<html class="inter_c15e96cb-module__0bjUvq__variable rubik_c16db57d-module__2LLdDq__variable" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="" name="next-size-adjust" />
-    <title>Lanka-Link · Smart Merchant Support Platform for Agency Banking and Procurement</title>
-    <meta
-      content="A web and mobile platform with explainable machine learning for rural Sri Lankan micro-merchants — credit readiness, weekly demand forecasting, buy-now-or-wait procurement advice and banking anomaly detection, each explained with SHAP."
-      name="description"
-    />
-    <meta
-      content="Lanka-Link — Smart Merchant Support Platform for Agency Banking and Procurement"
-      property="og:title"
-    />
-    <meta
-      content="A web and mobile platform with explainable machine learning for rural Sri Lankan micro-merchants — credit readiness, weekly demand forecasting, buy-now-or-wait procurement advice and banking anomaly detection, each explained with SHAP."
-      property="og:description"
-    />
-    <meta content="website" property="og:type" />
-    <meta content="summary" name="twitter:card" />
-    <meta
-      content="Lanka-Link — Smart Merchant Support Platform for Agency Banking and Procurement"
-      name="twitter:title"
-    />
-    <meta
-      content="A web and mobile platform with explainable machine learning for rural Sri Lankan micro-merchants — credit readiness, weekly demand forecasting, buy-now-or-wait procurement advice and banking anomaly detection, each explained with SHAP."
-      name="twitter:description"
-    />
-    <link href="favicon.ico" rel="icon" sizes="256x256" type="image/x-icon" />
-    <link href="favicon.svg" rel="icon" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body class="font-sans">
-    <div class="flex min-h-screen flex-col">
-      <header class="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-xl transition-shadow border-transparent">
-        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
-        <div class="container-page flex h-16 items-center justify-between">
-          <a aria-label="Lanka-Link home" class="flex items-center gap-2.5" href="index.html"
-            ><span
-              class="gradient-brand inline-flex shrink-0 items-center justify-center rounded-xl shadow-md shadow-brand/30"
-              style="width: 36px; height: 36px"
-              ><svg
-                fill="none"
-                height="20.88"
-                stroke="white"
-                stroke-linecap="round"
-                stroke-width="2.4"
-                viewbox="0 0 24 24"
-                width="20.88"
-              >
-                <path d="M10 14a4 4 0 0 1 0-5.66l2.1-2.1a4 4 0 0 1 5.66 5.66l-1.06 1.06"></path>
-                <path
-                  d="M14 10a4 4 0 0 1 0 5.66l-2.1 2.1a4 4 0 0 1-5.66-5.66l1.06-1.06"
-                  stroke="#3ddc97"
-                ></path></svg></span
-            ><span class="leading-tight"
-              ><span class="block font-display text-lg font-bold text-slate-900">Lanka-Link</span
-              ><span class="hidden text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400 sm:block"
-                >R26-IT-139</span
-              ></span
-            ></a
-          >
-          <nav class="hidden items-center gap-0.5 rounded-full border border-slate-200/80 bg-white/70 p-1 lg:flex">
-            <a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition bg-brand text-white shadow-sm"
-              href="index.html"
-              >Home</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="domain.html"
-              >Domain</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="milestones.html"
-              >Milestones</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="documents.html"
-              >Documents</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="presentations.html"
-              >Presentations</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="about.html"
-              >About Us</a
-            ><a
-              class="rounded-full px-3.5 py-1.5 text-sm font-medium transition text-slate-600 hover:text-brand-700"
-              href="contact.html"
-              >Contact Us</a
-            >
-          </nav>
-          <label aria-label="Menu" class="rounded-lg p-2 text-xl text-slate-700 lg:hidden" for="nav-toggle">☰</label>
-        </div>
-        <nav class="mobile-menu border-t border-slate-100 bg-white lg:hidden">
-          <div class="container-page flex flex-col py-2">
-            <a class="rounded-lg px-3 py-2.5 text-sm font-medium bg-brand-50 text-brand-700" href="index.html">Home</a
-            ><a class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100" href="domain.html"
-              >Domain</a
-            ><a
-              class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              href="milestones.html"
-              >Milestones</a
-            ><a
-              class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              href="documents.html"
-              >Documents</a
-            ><a
-              class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              href="presentations.html"
-              >Presentations</a
-            ><a class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100" href="about.html"
-              >About Us</a
-            ><a class="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100" href="contact.html"
-              >Contact Us</a
-            >
-          </div>
-        </nav>
-      </header>
-      <main class="flex-1">
-        <section class="gradient-hero relative overflow-hidden text-white">
-          <div aria-hidden="true" class="grid-pattern absolute inset-0"></div>
-          <div
-            class="container-page relative grid gap-12 pb-28 pt-16 md:grid-cols-[1.15fr_1fr] md:items-center md:pt-24"
-          >
-            <div class="animate-fade-up">
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200 backdrop-blur"
-                  >IT4010 Research Project · R26-IT-139</span
-                ><span
-                  class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200 backdrop-blur"
-                  >SLIIT</span
-                ><span
-                  class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200 backdrop-blur"
-                  >Explainable AI</span
-                >
-              </div>
-              <h1
-                class="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.4rem]"
-              >
-                Smart Merchant Support Platform <span class="text-gradient">for Agency Banking &amp; Procurement</span>
-              </h1>
-              <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
-                A digital platform with explainable machine learning for rural Sri Lankan micro-merchants.
-              </p>
-              <div class="mt-8 flex flex-wrap gap-3">
-                <a
-                  class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-brand-800 shadow-lg shadow-black/20 transition hover:-translate-y-0.5"
-                  href="domain.html"
-                  >Explore the research →</a
-                ><a
-                  class="rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
-                  href="documents.html"
-                  >Read the documents</a
-                ><a
-                  class="rounded-xl px-4 py-3 text-sm font-semibold text-brand-200 transition hover:text-white"
-                  href="domain.html#architecture"
-                  >🗺️ System architecture</a
-                >
-              </div>
-            </div>
-            <div aria-hidden="true" class="relative mx-auto h-[420px] w-full max-w-md select-none">
-              <div
-                class="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/40 blur-3xl"
-              ></div>
-              <div
-                class="absolute left-1/2 top-1/2 w-[210px] -translate-x-1/2 -translate-y-1/2 animate-float-slow rounded-[2.2rem] border border-white/15 bg-ink-800 p-2.5 shadow-2xl shadow-black/40"
-              >
-                <div class="overflow-hidden rounded-[1.7rem] bg-slate-50">
-                  <div class="gradient-brand px-4 pb-10 pt-5 text-white">
-                    <p class="text-[9px] opacity-80">Ayubowan 👋</p>
-                    <p class="mt-2 text-[9px] opacity-80">Net Profit</p>
-                    <p class="font-display text-xl font-bold">LKR 84,250</p>
-                  </div>
-                  <div class="-mt-7 grid grid-cols-2 gap-2 px-3">
-                    <div class="rounded-xl bg-white p-2 shadow-md">
-                      <p class="text-[8px] text-slate-400">Income</p>
-                      <p class="text-[11px] font-bold text-emerald-500">LKR 212k</p>
-                    </div>
-                    <div class="rounded-xl bg-white p-2 shadow-md">
-                      <p class="text-[8px] text-slate-400">Expense</p>
-                      <p class="text-[11px] font-bold text-rose-500">LKR 128k</p>
-                    </div>
-                  </div>
-                  <div class="px-3 pb-4 pt-3">
-                    <p class="text-[9px] font-semibold text-slate-500">Sales this week</p>
-                    <div class="mt-2 flex h-16 items-end gap-1.5">
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 38%"></div>
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 52%"></div>
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 44%"></div>
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 66%"></div>
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 58%"></div>
-                      <div class="flex-1 rounded-t bg-brand-600" style="height: 80%"></div>
-                      <div class="flex-1 rounded-t bg-brand-200" style="height: 72%"></div>
-                    </div>
-                    <div class="mt-3 grid grid-cols-3 gap-1.5">
-                      <div class="rounded-lg bg-white py-1.5 text-center text-xs shadow-sm">🧾</div>
-                      <div class="rounded-lg bg-white py-1.5 text-center text-xs shadow-sm">📦</div>
-                      <div class="rounded-lg bg-white py-1.5 text-center text-xs shadow-sm">🏦</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="absolute left-0 top-8 w-40 animate-float rounded-2xl border border-white/10 bg-white/95 p-3 shadow-xl backdrop-blur"
-              >
-                <p class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Credit readiness</p>
-                <div class="mt-2 flex items-center gap-2.5">
-                  <svg class="h-11 w-11 -rotate-90" viewbox="0 0 36 36">
-                    <circle cx="18" cy="18" fill="none" r="15.5" stroke="#e2e8f0" stroke-width="4"></circle>
-                    <circle
-                      cx="18"
-                      cy="18"
-                      fill="none"
-                      r="15.5"
-                      stroke="#3ddc97"
-                      stroke-dasharray="75.97200000000001 97.4"
-                      stroke-linecap="round"
-                      stroke-width="4"
-                    ></circle>
-                  </svg>
-                  <div>
-                    <p class="font-display text-lg font-bold leading-none text-slate-900">78</p>
-                    <p class="text-[10px] font-semibold text-emerald-600">Approved</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="absolute bottom-10 left-2 w-44 animate-float-slow rounded-2xl border border-white/10 bg-white/95 p-3 shadow-xl [animation-delay:1.2s]"
-              >
-                <p class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Next week · Rice 5kg</p>
-                <p class="mt-1 font-display text-base font-bold text-slate-900">
-                  46 units <span class="text-xs font-semibold text-brand-600">→ Restock</span>
-                </p>
-                <svg class="mt-1 h-7 w-full" viewbox="0 0 120 30">
-                  <polyline
-                    fill="none"
-                    points="0,24 20,20 40,22 60,14 80,16 100,8 120,10"
-                    stroke="#2a5bdb"
-                    stroke-linejoin="round"
-                    stroke-width="2.2"
-                  ></polyline>
-                  <polyline
-                    fill="none"
-                    points="100,8 120,10"
-                    stroke="#3ddc97"
-                    stroke-dasharray="3 3"
-                    stroke-width="2.2"
-                  ></polyline>
-                </svg>
-              </div>
-              <div
-                class="absolute right-0 top-24 w-40 animate-float rounded-2xl border border-white/10 bg-white/95 p-3 shadow-xl [animation-delay:.6s]"
-              >
-                <div class="flex items-center gap-2">
-                  <span class="relative flex h-2.5 w-2.5"
-                    ><span
-                      class="absolute inline-flex h-full w-full animate-pulse-ring rounded-full bg-amber-400"
-                    ></span
-                    ><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500"></span
-                  ></span>
-                  <p class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Banking check</p>
-                </div>
-                <p class="mt-1.5 text-xs font-semibold text-slate-800">Transfer looks unusual</p>
-                <p class="text-[10px] text-slate-500">Amount far above usual · verify customer</p>
-              </div>
-              <div
-                class="absolute bottom-16 right-3 animate-float rounded-full border border-accent/40 bg-ink-800/90 px-3 py-1.5 text-[10px] font-semibold text-accent shadow-lg [animation-delay:2s]"
-              >
-                ✦ Explained with SHAP
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="container-page relative z-10 -mt-16">
-          <div
-            class="grid gap-4 rounded-3xl border border-slate-200/80 bg-white p-4 shadow-[0_24px_60px_-30px_rgba(20,34,80,.45)] sm:grid-cols-2 lg:grid-cols-4 lg:p-6"
-          >
-            <div class="rounded-2xl p-4 lg:border-r lg:border-slate-100 lg:last:border-0">
-              <p class="font-display text-4xl font-extrabold tracking-tight text-brand-700">
-                <span class="tabular-nums">0.839</span>
-              </p>
-              <p class="mt-1 text-sm font-semibold text-slate-800">ROC-AUC</p>
-              <p class="text-xs text-slate-500">Credit readiness</p>
-            </div>
-            <div class="rounded-2xl p-4 lg:border-r lg:border-slate-100 lg:last:border-0">
-              <p class="font-display text-4xl font-extrabold tracking-tight text-brand-700">
-                <span class="tabular-nums">21.7%</span>
-              </p>
-              <p class="mt-1 text-sm font-semibold text-slate-800">lower forecast error</p>
-              <p class="text-xs text-slate-500">Weekly demand vs naive</p>
-            </div>
-            <div class="rounded-2xl p-4 lg:border-r lg:border-slate-100 lg:last:border-0">
-              <p class="font-display text-4xl font-extrabold tracking-tight text-brand-700">
-                <span class="tabular-nums">2.25%</span>
-              </p>
-              <p class="mt-1 text-sm font-semibold text-slate-800">saved on purchases</p>
-              <p class="text-xs text-slate-500">Buy now / wait advice</p>
-            </div>
-            <div class="rounded-2xl p-4 lg:border-r lg:border-slate-100 lg:last:border-0">
-              <p class="font-display text-4xl font-extrabold tracking-tight text-brand-700">
-                <span class="tabular-nums">86%</span>
-              </p>
-              <p class="mt-1 text-sm font-semibold text-slate-800">fewer false alarms</p>
-              <p class="text-xs text-slate-500">Banking anomalies (136 → 19)</p>
-            </div>
-          </div>
-        </section>
-        <section class="container-page grid gap-10 py-24 lg:grid-cols-[1fr_1.2fr] lg:items-start">
-          <div class="">
-            <div class="">
-              <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Overview</span>
-              <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-                Project Overview
-              </h2>
-            </div>
-            <div class="mt-6 space-y-4">
-              <p class="leading-relaxed text-slate-600">
-                Many small shop owners (“kade” owners) in rural Sri Lanka still run their business on paper. Without
-                records they cannot show a bank that they are credit-worthy, they run out of stock or over-stock, they
-                buy without knowing whether prices are about to rise, and — when they also work as agency-banking agents
-                — they have no way to spot a suspicious customer transaction.
-              </p>
-              <p class="leading-relaxed text-slate-600">
-                Lanka-Link is a web and mobile platform that turns a shop’s day-to-day records — sales, stock,
-                suppliers, purchases and agency-banking transactions — into one digital ledger, and uses four
-                explainable machine-learning models on that ledger: a credit-readiness score with a loan limit, a weekly
-                demand forecast that sets the reorder point, buy-now-or-wait price advice for procurement, and anomaly
-                detection for banking transactions. Every prediction shows the factors that raised or lowered it (SHAP),
-                and every model is evaluated honestly against simple rules and naive baselines.
-              </p>
-            </div>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="card card-hover">
-              <div class="text-2xl">📒</div>
-              <p class="mt-3 text-sm font-semibold italic text-slate-800">
-                “I have no records, so no bank will give me a loan.”
-              </p>
-              <div class="my-3 h-px bg-gradient-to-r from-brand-200 to-transparent"></div>
-              <p class="text-sm leading-relaxed text-slate-500">
-                Every sale is recorded in a digital ledger that produces an AI credit-readiness score and a loan limit.
-              </p>
-            </div>
-            <div class="card card-hover">
-              <div class="text-2xl">📦</div>
-              <p class="mt-3 text-sm font-semibold italic text-slate-800">
-                “I keep running out of stock — or have too much.”
-              </p>
-              <div class="my-3 h-px bg-gradient-to-r from-brand-200 to-transparent"></div>
-              <p class="text-sm leading-relaxed text-slate-500">
-                The AI forecasts next week’s sales per item and sets the reorder point with safety stock.
-              </p>
-            </div>
-            <div class="card card-hover">
-              <div class="text-2xl">🏷️</div>
-              <p class="mt-3 text-sm font-semibold italic text-slate-800">“I don’t know the best time to buy.”</p>
-              <div class="my-3 h-px bg-gradient-to-r from-brand-200 to-transparent"></div>
-              <p class="text-sm leading-relaxed text-slate-500">
-                Market-price trends tell the owner whether prices are likely to rise (buy now) or not (wait).
-              </p>
-            </div>
-            <div class="card card-hover">
-              <div class="text-2xl">🛡️</div>
-              <p class="mt-3 text-sm font-semibold italic text-slate-800">“How do I spot a suspicious transaction?”</p>
-              <div class="my-3 h-px bg-gradient-to-r from-brand-200 to-transparent"></div>
-              <p class="text-sm leading-relaxed text-slate-500">
-                Unusual agency-banking transactions are flagged for the agent, while CBSL limits are enforced.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="border-y border-slate-200/70 bg-white py-24">
-          <div class="container-page">
-            <div class="">
-              <div class="text-center">
-                <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>How it works</span>
-                <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-                  One ledger, four explainable models
-                </h2>
-                <p class="mt-4 text-base leading-relaxed sm:text-lg text-slate-500 mx-auto max-w-2xl">
-                  What a shop records once feeds every insight — the demand forecast decides when to restock, and steady
-                  stock improves the credit score.
-                </p>
-              </div>
-            </div>
-            <div class="relative mt-14 grid gap-6 md:grid-cols-4">
-              <div
-                aria-hidden="true"
-                class="absolute left-[12%] right-[12%] top-7 hidden h-0.5 bg-gradient-to-r from-brand-200 via-brand-400 to-accent md:block"
-              ></div>
-              <div class="relative text-center">
-                <div
-                  class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-800 font-display text-lg font-bold text-white shadow-lg ring-8 ring-white"
-                >
-                  01
-                </div>
-                <h3 class="mt-5 font-display text-lg font-bold text-slate-900">Record</h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                  Sales, purchases, stock, suppliers and banking go into one digital ledger — on web or mobile, in
-                  English or Sinhala.
-                </p>
-              </div>
-              <div class="relative text-center">
-                <div
-                  class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-800 font-display text-lg font-bold text-white shadow-lg ring-8 ring-white"
-                >
-                  02
-                </div>
-                <h3 class="mt-5 font-display text-lg font-bold text-slate-900">Predict</h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                  A FastAPI service runs the four models on features built from the shop’s own data, behind a secure
-                  backend.
-                </p>
-              </div>
-              <div class="relative text-center">
-                <div
-                  class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-800 font-display text-lg font-bold text-white shadow-lg ring-8 ring-white"
-                >
-                  03
-                </div>
-                <h3 class="mt-5 font-display text-lg font-bold text-slate-900">Explain</h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                  SHAP shows the factors that raised or lowered every prediction, in plain language.
-                </p>
-              </div>
-              <div class="relative text-center">
-                <div
-                  class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-800 font-display text-lg font-bold text-white shadow-lg ring-8 ring-white"
-                >
-                  04
-                </div>
-                <h3 class="mt-5 font-display text-lg font-bold text-slate-900">Decide</h3>
-                <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                  The owner gets a credit score, restock and buy / wait advice, and flagged transactions to check.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="container-page py-24">
-          <div class="">
-            <div class="">
-              <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Machine learning</span>
-              <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-                Four explainable components
-              </h2>
-              <p class="mt-4 text-base leading-relaxed sm:text-lg text-slate-500 max-w-2xl">
-                For each one, five algorithms were compared; the winner was chosen on training data only and tested once
-                on data it had never seen.
-              </p>
-            </div>
-          </div>
-          <div class="mt-12 grid gap-5 md:grid-cols-2">
-            <div class="card card-hover group relative overflow-hidden">
-              <div
-                class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-50 transition group-hover:scale-125"
-              ></div>
-              <div class="relative flex items-start gap-4">
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-3xl">
-                  💳
-                </div>
-                <div>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-ink-800 px-2 py-0.5 text-xs font-bold text-white">C1</span
-                    ><span class="text-xs font-medium text-slate-400">Classification</span>
-                  </div>
-                  <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Credit Readiness</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                    Scores a shop 0–100 from its digital ledger (months active, cash flow, margin, digital payments,
-                    stock-out rate) and sets a loan limit of 3.5 × monthly net cash flow. Logistic regression.
-                  </p>
-                  <p
-                    class="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-600"
-                  >
-                    ▲ ROC-AUC 0.839 · F1 0.75 vs 0.68 for bank rules
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card card-hover group relative overflow-hidden">
-              <div
-                class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-50 transition group-hover:scale-125"
-              ></div>
-              <div class="relative flex items-start gap-4">
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-3xl">
-                  📦
-                </div>
-                <div>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-ink-800 px-2 py-0.5 text-xs font-bold text-white">C2</span
-                    ><span class="text-xs font-medium text-slate-400">Classification + Regression</span>
-                  </div>
-                  <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Smart Procurement (Buy now / Wait)</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                    Predicts whether an item’s market price will rise in the next 4 weeks and forecasts that price,
-                    adding “good price now / prices may improve” advice to each purchase. Random forest.
-                  </p>
-                  <p
-                    class="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-600"
-                  >
-                    ▲ ROC-AUC 0.795 on future weeks · saves ≈ 2.2 % of the bill
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card card-hover group relative overflow-hidden">
-              <div
-                class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-50 transition group-hover:scale-125"
-              ></div>
-              <div class="relative flex items-start gap-4">
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-3xl">
-                  📈
-                </div>
-                <div>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-ink-800 px-2 py-0.5 text-xs font-bold text-white">C3</span
-                    ><span class="text-xs font-medium text-slate-400">Time-series Forecasting</span>
-                  </div>
-                  <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Weekly Demand Forecast</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                    Forecasts next week’s units per item, including Avurudu and festival effects; the forecast sets each
-                    item’s reorder point and safety stock. Random forest.
-                  </p>
-                  <p
-                    class="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-600"
-                  >
-                    ▲ 21.7 % lower error than “same as last week” · 64 % after Avurudu
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card card-hover group relative overflow-hidden">
-              <div
-                class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-50 transition group-hover:scale-125"
-              ></div>
-              <div class="relative flex items-start gap-4">
-                <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-3xl">
-                  🏦
-                </div>
-                <div>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-ink-800 px-2 py-0.5 text-xs font-bold text-white">C4</span
-                    ><span class="text-xs font-medium text-slate-400">Anomaly Detection</span>
-                  </div>
-                  <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Agency Banking Anomaly Detection</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-slate-500">
-                    Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits
-                    are enforced as hard blocks. XGBoost with an Isolation Forest input.
-                  </p>
-                  <p
-                    class="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-600"
-                  >
-                    ▲ False alarms cut from 136 to 19 per 1,000 customers
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="gradient-hero relative overflow-hidden py-24 text-white">
-          <div aria-hidden="true" class="grid-pattern absolute inset-0"></div>
-          <div class="container-page relative">
-            <div class="">
-              <div class="">
-                <span class="eyebrow !bg-white/10 !text-brand-200"
-                  ><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>Honest evaluation</span
-                >
-                <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl text-white">
-                  Does the AI beat the simple rule?
-                </h2>
-                <p class="mt-4 text-base leading-relaxed sm:text-lg text-slate-300 max-w-2xl">
-                  Every model is compared with the rule or naive forecast a shop owner or bank would use anyway — on
-                  unseen data, with bootstrap 95 % confidence intervals.
-                </p>
-              </div>
-            </div>
-            <div class="mt-12 grid gap-5 md:grid-cols-2">
-              <div class="">
-                <div class="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
-                  <div class="flex items-center justify-between gap-3">
-                    <div class="flex items-center gap-2">
-                      <span class="rounded-md bg-white/10 px-2 py-0.5 text-xs font-bold text-white">C1</span>
-                      <h3 class="font-display text-lg font-bold text-white">Credit readiness</h3>
-                    </div>
-                    <span class="shrink-0 text-[11px] font-medium uppercase tracking-wider text-slate-400"
-                      >↑ higher is better</span
-                    >
-                  </div>
-                  <p class="mt-1 text-sm text-slate-400">F1 score (test set, 500 shops)</p>
-                  <div class="mt-5 space-y-3">
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="font-semibold text-white">ML model</span
-                        ><span class="tabular-nums font-bold text-accent">0.753</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-gradient-to-r from-brand-400 to-accent"
-                          style="width: 100%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Bank rules</span
-                        ><span class="tabular-nums text-slate-300">0.681</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-slate-500/60"
-                          style="width: 90.4382470119522%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Strict bank rules</span
-                        ><span class="tabular-nums text-slate-300">0.490</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-slate-500/60"
-                          style="width: 65.07304116865869%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
-                    ML beats the bank rules by +0.071 F1 (95 % CI +0.024 to +0.122).
-                  </p>
-                </div>
-              </div>
-              <div class="">
-                <div class="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
-                  <div class="flex items-center justify-between gap-3">
-                    <div class="flex items-center gap-2">
-                      <span class="rounded-md bg-white/10 px-2 py-0.5 text-xs font-bold text-white">C2</span>
-                      <h3 class="font-display text-lg font-bold text-white">Smart procurement</h3>
-                    </div>
-                    <span class="shrink-0 text-[11px] font-medium uppercase tracking-wider text-slate-400"
-                      >↑ higher is better</span
-                    >
-                  </div>
-                  <p class="mt-1 text-sm text-slate-400">Money saved vs always buying now</p>
-                  <div class="mt-5 space-y-3">
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Perfect foresight</span
-                        ><span class="tabular-nums text-slate-300">3.31 %</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div class="h-full origin-left rounded-full bg-slate-500/60" style="width: 100%"></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="font-semibold text-white">ML model</span
-                        ><span class="tabular-nums font-bold text-accent">2.25 %</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-gradient-to-r from-brand-400 to-accent"
-                          style="width: 67.97583081570997%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Rule: price fell</span
-                        ><span class="tabular-nums text-slate-300">2.23 %</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-slate-500/60"
-                          style="width: 67.37160120845921%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
-                    Captures about two-thirds of the best possible saving on unseen future weeks.
-                  </p>
-                </div>
-              </div>
-              <div class="">
-                <div class="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
-                  <div class="flex items-center justify-between gap-3">
-                    <div class="flex items-center gap-2">
-                      <span class="rounded-md bg-white/10 px-2 py-0.5 text-xs font-bold text-white">C3</span>
-                      <h3 class="font-display text-lg font-bold text-white">Weekly demand forecast</h3>
-                    </div>
-                    <span class="shrink-0 text-[11px] font-medium uppercase tracking-wider text-slate-400"
-                      >↓ lower is better</span
-                    >
-                  </div>
-                  <p class="mt-1 text-sm text-slate-400">Mean absolute error (units / week)</p>
-                  <div class="mt-5 space-y-3">
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="font-semibold text-white">ML model</span
-                        ><span class="tabular-nums font-bold text-accent">10.89</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-gradient-to-r from-brand-400 to-accent"
-                          style="width: 76.96113074204948%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Same as last week</span
-                        ><span class="tabular-nums text-slate-300">13.90</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-slate-500/60"
-                          style="width: 98.23321554770318%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">Mean of past 4 weeks</span
-                        ><span class="tabular-nums text-slate-300">14.15</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div class="h-full origin-left rounded-full bg-slate-500/60" style="width: 100%"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
-                    21.7 % lower error overall and 64 % lower right after Avurudu.
-                  </p>
-                </div>
-              </div>
-              <div class="">
-                <div class="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
-                  <div class="flex items-center justify-between gap-3">
-                    <div class="flex items-center gap-2">
-                      <span class="rounded-md bg-white/10 px-2 py-0.5 text-xs font-bold text-white">C4</span>
-                      <h3 class="font-display text-lg font-bold text-white">Banking anomaly detection</h3>
-                    </div>
-                    <span class="shrink-0 text-[11px] font-medium uppercase tracking-wider text-slate-400"
-                      >↓ lower is better</span
-                    >
-                  </div>
-                  <p class="mt-1 text-sm text-slate-400">False alarms per 1,000 honest customers</p>
-                  <div class="mt-5 space-y-3">
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="font-semibold text-white">ML (threshold 0.87)</span
-                        ><span class="tabular-nums font-bold text-accent">19</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-gradient-to-r from-brand-400 to-accent"
-                          style="width: 3.281519861830743%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">ML (threshold 0.50)</span
-                        ><span class="tabular-nums text-slate-300">136</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div
-                          class="h-full origin-left rounded-full bg-slate-500/60"
-                          style="width: 23.488773747841105%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="mb-1 flex justify-between text-xs">
-                        <span class="text-slate-400">CBSL limit as a detector</span
-                        ><span class="tabular-nums text-slate-300">579</span>
-                      </div>
-                      <div class="h-2.5 overflow-hidden rounded-full bg-white/10">
-                        <div class="h-full origin-left rounded-full bg-slate-500/60" style="width: 100%"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
-                    So CBSL limits are enforced as hard blocks, and the ML model is the detector.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p class="mt-8 text-center text-xs text-slate-400">
-              Synthetic and public datasets — the comparisons are valid; absolute numbers are not a claim about
-              real-world performance.
-            </p>
-          </div>
-        </section>
-        <section class="container-page py-24">
-          <div class="">
-            <div class="text-center">
-              <span class="eyebrow"><span class="h-1.5 w-1.5 rounded-full bg-accent"></span>The platform</span>
-              <h2 class="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
-                Everything a small shop needs, in one app
-              </h2>
-              <p class="mt-4 text-base leading-relaxed sm:text-lg text-slate-500 mx-auto max-w-2xl">
-                Built for web and Android, in English and Sinhala — the AI lives inside everyday tools.
-              </p>
-            </div>
-          </div>
-          <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">📊</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Dashboard</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Income, expenses, profit and stock at a glance.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">🧾</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Transactions</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Every sale, purchase and expense, with items.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">📒</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Journal &amp; Reports</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Double-entry ledger, P&amp;L, PDF and Excel reports.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">📦</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Inventory</h3>
-                <p class="mt-0.5 text-sm text-slate-500">FIFO batches, low-stock alerts, lead times.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">🚚</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Suppliers</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Items, prices and road routes on Google Maps.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">🛒</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Procurement</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Orders with suppliers ranked by cover, price and distance.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">🏦</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Agency Banking</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Deposits, withdrawals and transfers with CBSL limits.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">💼</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">My Banks</h3>
-                <p class="mt-0.5 text-sm text-slate-500">Float account per bank and a shared cash pool.</p>
-              </div>
-            </div>
-            <div class="card card-hover flex items-start gap-4 !p-5">
-              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-xl">🤖</span>
-              <div>
-                <h3 class="font-display font-semibold text-slate-900">Predictions</h3>
-                <p class="mt-0.5 text-sm text-slate-500">All four AI insights, each with its reasons.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="container-page">
-          <div class="gradient-brand relative overflow-hidden rounded-3xl px-6 py-12 text-white sm:px-12">
-            <div aria-hidden="true" class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-white/10"></div>
-            <div aria-hidden="true" class="absolute -bottom-20 right-32 h-48 w-48 rounded-full bg-accent/20"></div>
-            <div class="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div>
-                <h2 class="font-display text-2xl font-bold sm:text-3xl">Meet the team behind Lanka-Link</h2>
-                <p class="mt-2 max-w-xl text-brand-100">4 researchers and 2 supervisors at SLIIT.</p>
-              </div>
-              <div class="flex flex-wrap gap-3">
-                <a
-                  class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-brand-800 transition hover:-translate-y-0.5"
-                  href="about.html"
-                  >About the team</a
-                ><a
-                  class="rounded-xl border border-white/30 px-6 py-3 text-sm font-semibold transition hover:bg-white/10"
-                  href="contact.html"
-                  >Contact us</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="gradient-hero relative mt-24 overflow-hidden text-slate-300">
-        <div aria-hidden="true" class="grid-pattern absolute inset-0 opacity-60"></div>
-        <div class="container-page relative py-14">
-          <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
-            <div class="max-w-sm">
-              <div class="flex items-center gap-2.5">
-                <span
-                  class="gradient-brand inline-flex shrink-0 items-center justify-center rounded-xl shadow-md shadow-brand/30"
-                  style="width: 34px; height: 34px"
-                  ><svg
-                    fill="none"
-                    height="19.72"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-width="2.4"
-                    viewbox="0 0 24 24"
-                    width="19.72"
-                  >
-                    <path d="M10 14a4 4 0 0 1 0-5.66l2.1-2.1a4 4 0 0 1 5.66 5.66l-1.06 1.06"></path>
-                    <path
-                      d="M14 10a4 4 0 0 1 0 5.66l-2.1 2.1a4 4 0 0 1-5.66-5.66l1.06-1.06"
-                      stroke="#3ddc97"
-                    ></path></svg></span
-                ><span class="font-display text-lg font-bold text-white">Lanka-Link</span>
-              </div>
-              <p class="mt-4 text-sm leading-relaxed text-slate-400">
-                Smart Merchant Support Platform for Agency Banking and Procurement
-              </p>
-              <p class="mt-2 text-xs text-slate-500">
-                A digital platform with explainable machine learning for rural Sri Lankan micro-merchants
-              </p>
-            </div>
-            <div>
-              <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Pages</p>
-              <ul class="grid grid-cols-2 gap-x-4 gap-y-1.5">
-                <li><a class="text-sm text-slate-300 transition hover:text-white" href="index.html">Home</a></li>
-                <li><a class="text-sm text-slate-300 transition hover:text-white" href="domain.html">Domain</a></li>
-                <li>
-                  <a class="text-sm text-slate-300 transition hover:text-white" href="milestones.html">Milestones</a>
-                </li>
-                <li>
-                  <a class="text-sm text-slate-300 transition hover:text-white" href="documents.html">Documents</a>
-                </li>
-                <li>
-                  <a class="text-sm text-slate-300 transition hover:text-white" href="presentations.html"
-                    >Presentations</a
-                  >
-                </li>
-                <li><a class="text-sm text-slate-300 transition hover:text-white" href="about.html">About Us</a></li>
-                <li>
-                  <a class="text-sm text-slate-300 transition hover:text-white" href="contact.html">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Project</p>
-              <ul class="space-y-1.5 text-sm">
-                <li>IT4010 Research Project · R26-IT-139</li>
-                <li>Sri Lanka Institute of Information Technology (SLIIT)</li>
-                <li><a class="transition hover:text-white" href="mailto:shanta.y@sliit.lk">shanta.y@sliit.lk</a></li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="mt-12 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row"
-          >
-            <span>© 2026 Lanka-Link · SLIIT</span><span>Explainable ML for rural micro-merchants 🇱🇰</span>
-          </div>
-        </div>
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Lanka-Link</title>
+  <meta name="description" content="A digital platform with explainable machine learning for rural Sri Lankan micro-merchants">
+  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand"><img src="favicon.svg" alt="" class="logo-mark" width="34" height="34"><span>Lanka<b>-Link</b></span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Menu">☰</label>
+      <nav class="site-nav">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="domain.html">Domain</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill"><i class="dot"></i>SLIIT Final Year Research Project · R26-IT-139</span>
+          <div class="topic-card">
+            <span class="eyebrow"><i class="dot"></i>Research topic</span>
+            <p>Smart Merchant Support Platform for Agency Banking and Procurement</p>
+          </div>
+          <h1>Smarter Shops,<br><span class="grad">Explained by AI</span></h1>
+          <p class="lead">A web and mobile platform with explainable machine learning for rural Sri Lankan micro-merchants — credit readiness, weekly demand forecasting, buy-now-or-wait procurement advice and banking anomaly detection, each explained with SHAP.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="domain.html">Explore Research</a>
+            <a class="btn btn-ghost" href="about.html">Meet the Team</a>
+          </div>
+          <div class="stats"><div class="stat"><b>0.839</b><span>ROC-AUC</span></div><div class="stat"><b>21.7%</b><span>lower forecast error</span></div><div class="stat"><b>2.25%</b><span>saved on purchases</span></div></div>
+        </div>
+        <div class="window">
+          <div class="window-bar"><i></i><i></i><i></i><span>Lanka-Link · AI insights</span></div>
+          <ul class="findings">
+            <li class="finding"><span class="f-icon">💳</span><div><b>Credit readiness: 78 / 100</b><small>Ready to apply · loan limit LKR 1.2 M</small></div><span class="sev sev-good">GOOD</span></li>
+            <li class="finding"><span class="f-icon">🏦</span><div><b>Banking transfer looks unusual</b><small>Amount far above this customer&#x27;s usual</small></div><span class="sev sev-high">HIGH</span></li>
+            <li class="finding"><span class="f-icon">📦</span><div><b>Rice 5 kg — restock now</b><small>Forecast 46 units next week · stock 12</small></div><span class="sev sev-mid">MEDIUM</span></li>
+            <li class="finding"><span class="f-icon">🛒</span><div><b>Sugar — wait before buying</b><small>Market price has been falling for 4 weeks</small></div><span class="sev sev-low">LOW</span></li>
+          </ul>
+          <p class="window-foot">Every result is explained with SHAP — example output</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow center">
+        <span class="pill">Project Overview</span>
+        <h2>One Digital Ledger, <span class="grad">Four Explainable Models</span></h2>
+        <div class="prose"><p>Many small shop owners (“kade” owners) in rural Sri Lanka still run their business on paper. Without records they cannot show a bank that they are credit-worthy, they run out of stock or over-stock, they buy without knowing whether prices are about to rise, and — when they also work as agency-banking agents — they have no way to spot a suspicious customer transaction.</p><p>Lanka-Link is a web and mobile platform that turns a shop’s day-to-day records — sales, stock, suppliers, purchases and agency-banking transactions — into one digital ledger, and uses four explainable machine-learning models on that ledger: a credit-readiness score with a loan limit, a weekly demand forecast that sets the reorder point, buy-now-or-wait price advice for procurement, and anomaly detection for banking transactions. Every prediction shows the factors that raised or lowered it (SHAP), and every model is evaluated honestly against simple rules and naive baselines.</p></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head center"><span class="pill">The problem</span><h2>What Shop Owners Told Us</h2></div>
+        <div class="grid g4">
+        <article class="card prob"><span class="cap-icon">📒</span><p class="quote">“I have no records, so no bank will give me a loan.”</p><p>→ Every sale is recorded in a digital ledger that produces an AI credit-readiness score and a loan limit.</p></article>
+        <article class="card prob"><span class="cap-icon">📦</span><p class="quote">“I keep running out of stock — or have too much.”</p><p>→ The AI forecasts next week’s sales per item and sets the reorder point with safety stock.</p></article>
+        <article class="card prob"><span class="cap-icon">🏷️</span><p class="quote">“I don’t know the best time to buy.”</p><p>→ Market-price trends tell the owner whether prices are likely to rise (buy now) or not (wait).</p></article>
+        <article class="card prob"><span class="cap-icon">🛡️</span><p class="quote">“How do I spot a suspicious transaction?”</p><p>→ Unusual agency-banking transactions are flagged for the agent, while CBSL limits are enforced.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center"><span class="pill">Research components</span><h2>Four AI Components</h2>
+          <p class="lead">Each component is one research question, one model and one honest comparison with the simple rule it replaces.</p></div>
+        <div class="grid g2">
+        <article class="card comp">
+          <div class="comp-head"><span class="code">C1</span><span class="tag">Classification</span></div>
+          <h3>💳 Credit Readiness</h3>
+          <p>Scores a shop 0–100 from its digital ledger (months active, cash flow, margin, digital payments, stock-out rate) and sets a loan limit of 3.5 × monthly net cash flow. Logistic regression.</p>
+          <p class="metric">ROC-AUC 0.839 · F1 0.75 vs 0.68 for bank rules</p>
+        </article>
+        <article class="card comp">
+          <div class="comp-head"><span class="code">C2</span><span class="tag">Classification + Regression</span></div>
+          <h3>📦 Smart Procurement (Buy now / Wait)</h3>
+          <p>Predicts whether an item’s market price will rise in the next 4 weeks and forecasts that price, adding “good price now / prices may improve” advice to each purchase. Random forest.</p>
+          <p class="metric">ROC-AUC 0.795 on future weeks · saves ≈ 2.2 % of the bill</p>
+        </article>
+        <article class="card comp">
+          <div class="comp-head"><span class="code">C3</span><span class="tag">Time-series Forecasting</span></div>
+          <h3>📈 Weekly Demand Forecast</h3>
+          <p>Forecasts next week’s units per item, including Avurudu and festival effects; the forecast sets each item’s reorder point and safety stock. Random forest.</p>
+          <p class="metric">21.7 % lower error than “same as last week” · 64 % after Avurudu</p>
+        </article>
+        <article class="card comp">
+          <div class="comp-head"><span class="code">C4</span><span class="tag">Anomaly Detection</span></div>
+          <h3>🏦 Agency Banking Anomaly Detection</h3>
+          <p>Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input.</p>
+          <p class="metric">False alarms cut from 136 to 19 per 1,000 customers</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head center"><span class="pill">How it works</span><h2>From Records to Decisions</h2></div>
+        <ol class="grid g4 steps"><li class="card step"><span class="step-no">01</span><h3>Record</h3><p>Sales, purchases, stock, suppliers and banking go into one digital ledger — on web or mobile, in English or Sinhala.</p></li><li class="card step"><span class="step-no">02</span><h3>Predict</h3><p>A FastAPI service runs the four models on features built from the shop’s own data, behind a secure backend.</p></li><li class="card step"><span class="step-no">03</span><h3>Explain</h3><p>SHAP shows the factors that raised or lowered every prediction, in plain language.</p></li><li class="card step"><span class="step-no">04</span><h3>Decide</h3><p>The owner gets a credit score, restock and buy / wait advice, and flagged transactions to check.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center"><span class="pill">Results</span><h2>Tested Against Simple Rules</h2>
+          <p class="lead">Every model is measured on data it never saw and compared with what a shop owner or bank would do without it.</p></div>
+        <div class="grid g2">
+        <article class="card result">
+          <span class="code">C1</span>
+          <h3>Credit readiness</h3>
+          <p class="muted small">F1 score (test set, 500 shops) · higher is better</p>
+            <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:100%"></i></div><b>0.753</b></div>
+            <div class="bar-row"><span>Bank rules</span><div class="bar"><i style="width:90%"></i></div><b>0.681</b></div>
+            <div class="bar-row"><span>Strict bank rules</span><div class="bar"><i style="width:65%"></i></div><b>0.490</b></div>
+          <p class="note">ML beats the bank rules by +0.071 F1 (95 % CI +0.024 to +0.122).</p>
+        </article>
+        <article class="card result">
+          <span class="code">C2</span>
+          <h3>Smart procurement</h3>
+          <p class="muted small">Money saved vs always buying now · higher is better</p>
+            <div class="bar-row"><span>Perfect foresight</span><div class="bar"><i style="width:100%"></i></div><b>3.31 %</b></div>
+            <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:68%"></i></div><b>2.25 %</b></div>
+            <div class="bar-row"><span>Rule: price fell</span><div class="bar"><i style="width:67%"></i></div><b>2.23 %</b></div>
+          <p class="note">Captures about two-thirds of the best possible saving on unseen future weeks.</p>
+        </article>
+        <article class="card result">
+          <span class="code">C3</span>
+          <h3>Weekly demand forecast</h3>
+          <p class="muted small">Mean absolute error (units / week) · lower is better</p>
+            <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:77%"></i></div><b>10.89</b></div>
+            <div class="bar-row"><span>Same as last week</span><div class="bar"><i style="width:98%"></i></div><b>13.90</b></div>
+            <div class="bar-row"><span>Mean of past 4 weeks</span><div class="bar"><i style="width:100%"></i></div><b>14.15</b></div>
+          <p class="note">21.7 % lower error overall and 64 % lower right after Avurudu.</p>
+        </article>
+        <article class="card result">
+          <span class="code">C4</span>
+          <h3>Banking anomaly detection</h3>
+          <p class="muted small">False alarms per 1,000 honest customers · lower is better</p>
+            <div class="bar-row ours"><span>ML (threshold 0.87)</span><div class="bar"><i style="width:4%"></i></div><b>19</b></div>
+            <div class="bar-row"><span>ML (threshold 0.50)</span><div class="bar"><i style="width:23%"></i></div><b>136</b></div>
+            <div class="bar-row"><span>CBSL limit as a detector</span><div class="bar"><i style="width:100%"></i></div><b>579</b></div>
+          <p class="note">So CBSL limits are enforced as hard blocks, and the ML model is the detector.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head center"><span class="pill">Core capabilities</span><h2>Everything a Small Shop Needs</h2>
+          <p class="lead">A web app and an Android app, in English and Sinhala, built on the same secure backend.</p></div>
+        <div class="grid g3">
+        <article class="card cap"><span class="cap-icon">📊</span><h3>Dashboard</h3><p>Income, expenses, profit and stock at a glance.</p></article>
+        <article class="card cap"><span class="cap-icon">🧾</span><h3>Transactions</h3><p>Every sale, purchase and expense, with items.</p></article>
+        <article class="card cap"><span class="cap-icon">📒</span><h3>Journal &amp; Reports</h3><p>Double-entry ledger, P&amp;L, PDF and Excel reports.</p></article>
+        <article class="card cap"><span class="cap-icon">📦</span><h3>Inventory</h3><p>FIFO batches, low-stock alerts, lead times.</p></article>
+        <article class="card cap"><span class="cap-icon">🚚</span><h3>Suppliers</h3><p>Items, prices and road routes on Google Maps.</p></article>
+        <article class="card cap"><span class="cap-icon">🛒</span><h3>Procurement</h3><p>Orders with suppliers ranked by cover, price and distance.</p></article>
+        <article class="card cap"><span class="cap-icon">🏦</span><h3>Agency Banking</h3><p>Deposits, withdrawals and transfers with CBSL limits.</p></article>
+        <article class="card cap"><span class="cap-icon">💼</span><h3>My Banks</h3><p>Float account per bank and a shared cash pool.</p></article>
+        <article class="card cap"><span class="cap-icon">🤖</span><h3>Predictions</h3><p>All four AI insights, each with its reasons.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <span class="pill">Get started</span>
+          <h2>Ready to Explore Lanka-Link?</h2>
+          <p class="lead">Dive into the research, follow the milestones, or meet the team behind the project.</p>
+          <div class="btn-row center-row">
+            <a class="btn btn-primary" href="domain.html">View Domain Research</a>
+            <a class="btn btn-ghost" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand"><img src="favicon.svg" alt="" class="logo-mark" width="34" height="34"><span>Lanka<b>-Link</b></span></a>
+        <p class="muted">Smart Merchant Support Platform for Agency Banking and Procurement. SLIIT Final Year Research Project 2025–2026.</p>
+      </div>
+      <div><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="domain.html">Domain</a></li><li><a href="milestones.html">Milestones</a></li><li><a href="documents.html">Documents</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="presentations.html">Presentations</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div><h4>Project</h4><ul>
+        <li><a href="domain.html#methodology">Methodology</a></li>
+        <li><a href="domain.html#diagrams">System Diagrams</a></li>
+        <li><a href="domain.html#technologies">Technologies</a></li>
+      </ul></div>
+    </div>
+    <div class="container footer-bottom">© 2025–2026 Lanka-Link Research Group · IT4010 Research Project · R26-IT-139 · SLIIT</div>
+  </footer>
+</body>
 </html>
