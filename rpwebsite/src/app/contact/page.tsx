@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import SectionHeader from "@/components/SectionHeader";
+import PageHero from "@/components/PageHero";
 import { contact, site } from "@/data/content";
 
 function InfoCard({
@@ -48,12 +48,13 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container-page py-16">
-      <SectionHeader
+    <>
+      <PageHero
         eyebrow="Contact"
         title="Get in Touch"
         subtitle={`Have questions about ${site.projectId}? Interested in collaboration or feedback? We'd love to hear from you.`}
       />
+      <div className="container-page py-14">
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2">
         <div>
@@ -184,5 +185,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

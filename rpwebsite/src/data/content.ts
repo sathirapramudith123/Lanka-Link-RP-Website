@@ -1,11 +1,12 @@
 export const site = {
-  projectId: "Lanak Link",
-  title: "Simulated Agency Banking and Smart Procument", // TODO: Real project title
+  projectId: "Lanka-Link",
+  title: "Smart Merchant Support Platform for Agency Banking and Procurement",
+  tagline: "A digital platform with explainable machine learning for rural Sri Lankan micro-merchants",
   subtitle:
-    "A machine learning research project combining credit readiness scoring, demand forecasting, procurement risk, and agency banking analytics — each explained with SHAP.", // TODO: Real subtitle
-  module: "Research Project", // TODO: e.g. "IT4010 - Research Project"
-  year: 2026, // TODO: Real year
-  university: "SLIIT", // TODO: Real university/faculty name
+    "A web and mobile platform with explainable machine learning for rural Sri Lankan micro-merchants — credit readiness, weekly demand forecasting, buy-now-or-wait procurement advice and banking anomaly detection, each explained with SHAP.",
+  module: "IT4010 Research Project · R26-IT-139",
+  year: 2026,
+  university: "SLIIT",
 };
 
 export const nav = [
@@ -19,10 +20,10 @@ export const nav = [
 ];
 
 export const abstract = {
-  heading: "Project Overview", // TODO: Real heading
+  heading: "Project Overview",
   paragraphs: [
-    "TODO: Replace with the first paragraph of your project abstract, describing the problem domain and motivation.",
-    "TODO: Replace with the second paragraph, describing your proposed approach and expected contribution.",
+    "Many small shop owners (“kade” owners) in rural Sri Lanka still run their business on paper. Without records they cannot show a bank that they are credit-worthy, they run out of stock or over-stock, they buy without knowing whether prices are about to rise, and — when they also work as agency-banking agents — they have no way to spot a suspicious customer transaction.",
+    "Lanka-Link is a web and mobile platform that turns a shop’s day-to-day records — sales, stock, suppliers, purchases and agency-banking transactions — into one digital ledger, and uses four explainable machine-learning models on that ledger: a credit-readiness score with a loan limit, a weekly demand forecast that sets the reorder point, buy-now-or-wait price advice for procurement, and anomaly detection for banking transactions. Every prediction shows the factors that raised or lowered it (SHAP), and every model is evaluated honestly against simple rules and naive baselines.",
   ],
 };
 
@@ -31,82 +32,181 @@ export const components = [
     id: "C1",
     icon: "💳",
     task: "Classification",
-    title: "Credit Readiness Component",
-    desc: "TODO: Short description of the credit readiness ML component.", // TODO
-    metric: "TODO: e.g. Accuracy 92%",
+    title: "Credit Readiness",
+    desc: "Scores a shop 0–100 from its digital ledger (months active, cash flow, margin, digital payments, stock-out rate) and sets a loan limit of 3.5 × monthly net cash flow. Logistic regression.",
+    metric: "ROC-AUC 0.839 · F1 0.75 vs 0.68 for bank rules",
   },
   {
     id: "C2",
-    icon: "📈",
-    task: "Forecasting",
-    title: "Demand Forecast Component",
-    desc: "TODO: Short description of the demand forecasting ML component.", // TODO
-    metric: "TODO: e.g. MAPE 8%",
+    icon: "📦",
+    task: "Classification + Regression",
+    title: "Smart Procurement (Buy now / Wait)",
+    desc: "Predicts whether an item’s market price will rise in the next 4 weeks and forecasts that price, adding “good price now / prices may improve” advice to each purchase. Random forest.",
+    metric: "ROC-AUC 0.795 on future weeks · saves ≈ 2.2 % of the bill",
   },
   {
     id: "C3",
-    icon: "📦",
-    task: "Risk Analysis",
-    title: "Procurement Component",
-    desc: "TODO: Short description of the procurement risk ML component.", // TODO
-    metric: "TODO: e.g. F1 0.89",
+    icon: "📈",
+    task: "Time-series Forecasting",
+    title: "Weekly Demand Forecast",
+    desc: "Forecasts next week’s units per item, including Avurudu and festival effects; the forecast sets each item’s reorder point and safety stock. Random forest.",
+    metric: "21.7 % lower error than “same as last week” · 64 % after Avurudu",
   },
   {
     id: "C4",
     icon: "🏦",
-    task: "Classification",
-    title: "Agency Banking Component",
-    desc: "TODO: Short description of the agency banking ML component.", // TODO
-    metric: "TODO: e.g. Accuracy 90%",
+    task: "Anomaly Detection",
+    title: "Agency Banking Anomaly Detection",
+    desc: "Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input.",
+    metric: "False alarms cut from 136 to 19 per 1,000 customers",
   },
+];
+
+// Headline results for the home page — every number is from the model cards
+// (R26-IT-139/ML model/*/README.md).
+export const highlights = [
+  { value: 0.839, decimals: 3, prefix: "", suffix: "", label: "ROC-AUC", detail: "Credit readiness" },
+  { value: 21.7, decimals: 1, prefix: "", suffix: "%", label: "lower forecast error", detail: "Weekly demand vs naive" },
+  { value: 2.25, decimals: 2, prefix: "", suffix: "%", label: "saved on purchases", detail: "Buy now / wait advice" },
+  { value: 86, decimals: 0, prefix: "", suffix: "%", label: "fewer false alarms", detail: "Banking anomalies (136 → 19)" },
+];
+
+// The shop owner's problem and what the platform does about it
+export const problems = [
+  { icon: "📒", problem: "“I have no records, so no bank will give me a loan.”", solution: "Every sale is recorded in a digital ledger that produces an AI credit-readiness score and a loan limit." },
+  { icon: "📦", problem: "“I keep running out of stock — or have too much.”", solution: "The AI forecasts next week’s sales per item and sets the reorder point with safety stock." },
+  { icon: "🏷️", problem: "“I don’t know the best time to buy.”", solution: "Market-price trends tell the owner whether prices are likely to rise (buy now) or not (wait)." },
+  { icon: "🛡️", problem: "“How do I spot a suspicious transaction?”", solution: "Unusual agency-banking transactions are flagged for the agent, while CBSL limits are enforced." },
+];
+
+// How the parts connect (home page diagram)
+export const pipeline = [
+  { step: "01", title: "Record", text: "Sales, purchases, stock, suppliers and banking go into one digital ledger — on web or mobile, in English or Sinhala." },
+  { step: "02", title: "Predict", text: "A FastAPI service runs the four models on features built from the shop’s own data, behind a secure backend." },
+  { step: "03", title: "Explain", text: "SHAP shows the factors that raised or lowered every prediction, in plain language." },
+  { step: "04", title: "Decide", text: "The owner gets a credit score, restock and buy / wait advice, and flagged transactions to check." },
+];
+
+// Model vs the simple alternative, per component (bar chart on the home page).
+// `better: "higher" | "lower"` says which direction is good for that metric.
+export const results = [
+  {
+    id: "C1",
+    title: "Credit readiness",
+    metric: "F1 score (test set, 500 shops)",
+    better: "higher",
+    bars: [
+      { label: "ML model", value: 0.753, display: "0.753", ours: true },
+      { label: "Bank rules", value: 0.681, display: "0.681" },
+      { label: "Strict bank rules", value: 0.49, display: "0.490" },
+    ],
+    note: "ML beats the bank rules by +0.071 F1 (95 % CI +0.024 to +0.122).",
+  },
+  {
+    id: "C2",
+    title: "Smart procurement",
+    metric: "Money saved vs always buying now",
+    better: "higher",
+    bars: [
+      { label: "Perfect foresight", value: 3.31, display: "3.31 %" },
+      { label: "ML model", value: 2.25, display: "2.25 %", ours: true },
+      { label: "Rule: price fell", value: 2.23, display: "2.23 %" },
+    ],
+    note: "Captures about two-thirds of the best possible saving on unseen future weeks.",
+  },
+  {
+    id: "C3",
+    title: "Weekly demand forecast",
+    metric: "Mean absolute error (units / week)",
+    better: "lower",
+    bars: [
+      { label: "ML model", value: 10.89, display: "10.89", ours: true },
+      { label: "Same as last week", value: 13.9, display: "13.90" },
+      { label: "Mean of past 4 weeks", value: 14.15, display: "14.15" },
+    ],
+    note: "21.7 % lower error overall and 64 % lower right after Avurudu.",
+  },
+  {
+    id: "C4",
+    title: "Banking anomaly detection",
+    metric: "False alarms per 1,000 honest customers",
+    better: "lower",
+    bars: [
+      { label: "ML (threshold 0.87)", value: 19, display: "19", ours: true },
+      { label: "ML (threshold 0.50)", value: 136, display: "136" },
+      { label: "CBSL limit as a detector", value: 579, display: "579" },
+    ],
+    note: "So CBSL limits are enforced as hard blocks, and the ML model is the detector.",
+  },
+];
+
+// Platform modules (what the app contains)
+export const modules = [
+  { icon: "📊", title: "Dashboard", text: "Income, expenses, profit and stock at a glance." },
+  { icon: "🧾", title: "Transactions", text: "Every sale, purchase and expense, with items." },
+  { icon: "📒", title: "Journal & Reports", text: "Double-entry ledger, P&L, PDF and Excel reports." },
+  { icon: "📦", title: "Inventory", text: "FIFO batches, low-stock alerts, lead times." },
+  { icon: "🚚", title: "Suppliers", text: "Items, prices and road routes on Google Maps." },
+  { icon: "🛒", title: "Procurement", text: "Orders with suppliers ranked by cover, price and distance." },
+  { icon: "🏦", title: "Agency Banking", text: "Deposits, withdrawals and transfers with CBSL limits." },
+  { icon: "💼", title: "My Banks", text: "Float account per bank and a shared cash pool." },
+  { icon: "🤖", title: "Predictions", text: "All four AI insights, each with its reasons." },
 ];
 
 export const scope = {
   intro:
-    "TODO: One or two sentences introducing the research scope and approach.", // TODO
+    "Lanka-Link sits where micro-enterprise finance, retail operations and agency banking meet. The research asks whether explainable machine learning, built on a shop’s own digital records, can give rural micro-merchants decision support they can trust — and measures that honestly.",
 
   literatureSurvey: {
     heading: "Literature Survey",
     paragraphs: [
-      "TODO: Summarize existing research and systems related to your problem domain. What has already been done, and by whom?",
-      "TODO: Add a second paragraph if needed, covering another angle of prior work (e.g. academic research vs. industry tools).",
+      "Earlier work shows that alternative data — transaction histories, cash flow and digital-payment activity — can predict the credit-worthiness of “thin-file” small businesses that have no formal credit history. Retail studies apply machine learning to sales forecasting and inventory control, and commodity-price forecasting is widely used to time purchases. In digital finance, fraud and anomaly detection is commonly studied on simulated mobile-money data such as PaySim.",
+      "Explainable AI methods such as SHAP make individual predictions understandable, which is essential when the users are not data experts. Most existing solutions, however, treat each of these problems separately, target banks or large retailers rather than the shop owner, and are often evaluated with random splits that overstate results on time-ordered data. The full list of references is in the research proposal.",
     ],
   },
 
   researchGap: {
     heading: "Research Gap",
     paragraphs: [
-      "TODO: Explain what is missing in existing solutions — the specific gap your research fills.",
+      "There is no single tool for rural Sri Lankan micro-merchants that connects day-to-day record keeping with credit, stock, procurement and agency-banking decisions. Existing models are mostly black boxes, ignore local factors such as the Avurudu festival season and CBSL agency-banking limits, and are rarely compared against the simple rules a shop owner or bank already uses — so it is unclear whether the machine learning adds real value.",
     ],
   },
 
   researchProblem: {
     heading: "Research Problem",
     paragraphs: [
-      "TODO: State the core problem your research addresses, in one or two clear sentences.",
+      "How can a single digital ledger, with explainable machine-learning models built on it, help rural micro-merchants become credit-ready, keep the right stock, buy at the right time and run agency banking safely — and how much better is it than the simple rules they would otherwise follow?",
     ],
   },
 
   objectives: [
-    "TODO: Objective 1 — e.g. Develop an explainable credit readiness scoring model.",
-    "TODO: Objective 2 — e.g. Build a demand forecasting model for SME inventory planning.",
-    "TODO: Objective 3 — e.g. Design a procurement risk assessment component.",
-    "TODO: Objective 4 — e.g. Implement an agency banking risk classification model.",
+    "Build a credit-readiness model that scores a shop from its own ledger and sets an explainable loan limit, and compare it with standard bank rules.",
+    "Forecast weekly demand per item — including Avurudu and festival effects — and use it to set reorder points and safety stock.",
+    "Advise whether to buy now or wait using market-price trends, and measure the money it saves on real price data.",
+    "Detect unusual agency-banking transactions while enforcing CBSL daily limits, keeping false alarms low.",
+    "Explain every prediction with SHAP, and deliver all four models in one web and mobile platform (English and Sinhala) through a secure backend.",
   ],
 
   methodology: {
     heading: "Methodology",
     paragraphs: [
-      "TODO: Describe your overall research approach and process — data collection, model development, evaluation, etc.",
+      "Data: a synthetic digital ledger of 2,500 shops (credit readiness), public market prices of 67 items from 2023 to 2026 (procurement), a weekly sales series of 26 items from 2022 to 2026 (demand) and 164,260 PaySim transactions adapted to agency banking (anomaly detection).",
+      "For each component five algorithms were compared — logistic regression, decision tree, random forest, gradient boosting and XGBoost. The model is chosen by cross-validation on the training data only (time-based expanding-window validation for the time-series models) and tested once on unseen data; time-series models are tested on future weeks with a gap so no future information leaks in.",
+      "Every model is compared with simple rules or naive forecasts, with bootstrap 95 % confidence intervals, and turned into practical terms (money saved, left-over stock, false alarms per 1,000 customers). SHAP explains each prediction. The models run in a Python FastAPI service behind a Node.js backend that checks the login and builds the inputs from the shop’s own data, used by a Next.js web app and a Flutter mobile app.",
     ],
   },
 
   technologies: [
-    { name: "Python", category: "Language" }, // TODO: real tech stack
-    { name: "TensorFlow", category: "ML Framework" }, // TODO
-    { name: "SHAP", category: "Explainability" }, // TODO
-    { name: "Next.js", category: "Frontend" }, // TODO
-    { name: "TODO Tech", category: "TODO Category" }, // TODO
+    { name: "Next.js", category: "Web app" },
+    { name: "Flutter", category: "Mobile app" },
+    { name: "Node.js + Express", category: "Backend API" },
+    { name: "Supabase (PostgreSQL)", category: "Database" },
+    { name: "Python + FastAPI", category: "ML service" },
+    { name: "scikit-learn", category: "Machine learning" },
+    { name: "XGBoost", category: "Machine learning" },
+    { name: "SHAP", category: "Explainability" },
+    { name: "pandas", category: "Data" },
+    { name: "Google Maps", category: "Maps & routes" },
   ],
 
   images: [
@@ -119,79 +219,63 @@ export const scope = {
 
 export const milestones = [
   {
-    phase: "Proposal",
-    date: "TODO: e.g. Jan 2026", // TODO
+    phase: "Proposal & Research Design",
+    date: "Early 2026", // confirm
     status: "done",
     items: [
-      "TODO: e.g. Topic selection and approval",
-      "TODO: e.g. Proposal document submitted",
+      "Research problem, objectives and scope defined; proposal presented",
+      "Literature survey and selection of the four datasets",
+      "System architecture: web, mobile, backend, ML service and database",
     ],
   },
   {
-    phase: "Research & Design",
-    date: "TODO: e.g. Mar 2026", // TODO
+    phase: "Progress Presentation 1 — Prototypes",
+    date: "May – June 2026", // confirm (development started 30 Apr 2026)
+    status: "done",
+    items: [
+      "Digital ledger: transactions, inventory, suppliers and procurement",
+      "First model pipelines for credit scoring and demand forecasting",
+      "Early web and mobile dashboards",
+    ],
+  },
+  {
+    phase: "Progress Presentation 2 — Integration & Explainability",
+    date: "July – September 2026", // confirm
+    status: "done",
+    items: [
+      "All four models served by the FastAPI ML service, with SHAP explanations",
+      "Honest evaluation: time-based tests, baselines and bootstrap confidence intervals",
+      "Agency banking with CBSL limits, float accounts and a shared cash pool",
+      "Journal, financial reports (PDF / Excel) and Sinhala language support",
+    ],
+  },
+  {
+    phase: "Final Evaluation & Viva",
+    date: "October 2026",
     status: "current",
     items: [
-      "TODO: e.g. Literature survey completed",
-      "TODO: e.g. System architecture designed",
+      "Final thesis and research paper",
+      "Final presentation and viva — 20 October 2026",
     ],
-  },
-  {
-    phase: "Implementation",
-    date: "TODO: e.g. Jun 2026", // TODO
-    status: "upcoming",
-    items: [
-      "TODO: e.g. Model development for all four components",
-      "TODO: e.g. Integration and testing",
-    ],
-  },
-  {
-    phase: "Final Evaluation",
-    date: "TODO: e.g. Sep 2026", // TODO
-    status: "upcoming",
-    items: [
-      "TODO: e.g. Final report submission",
-      "TODO: e.g. Viva / presentation",
-    ],
-  },
-];
-
-export const downloads = [
-  {
-    title: "Research Proposal",
-    desc: "Initial project proposal document.", // TODO
-    href: "/downloads/proposal.pdf",
-    available: false,
-  },
-  {
-    title: "Progress Report",
-    desc: "Mid-project progress report.", // TODO
-    href: "/downloads/progress-report.pdf",
-    available: false,
-  },
-  {
-    title: "Final Report",
-    desc: "Final thesis / research report.", // TODO
-    href: "/downloads/final-report.pdf",
-    available: false,
   },
 ];
 
 export const presentations = [
   {
-    title: "Lanak Link",
+    title: "Lanka-Link",
     subtitle: "SME Credit & Agency Banking Risk Platform", // TODO
     tag: "Proposal Presentation",
     status: "available", // "available" | "upcoming"
-    desc: "Introduction to Lanak Link, project motivation, research problem, objectives, scope, methodology, and expected outcomes.", // TODO
+    desc: "Introduction to Lanka-Link, project motivation, research problem, objectives, scope, methodology, and expected outcomes.", // TODO
     stage: "Proposal Stage",
     fileType: "PDF",
     actionLabel: "Open PDF",
-    href: "/presentations/proposal.pdf",
+    href: "/presentations/proposal.pdf", // download
+    openHref: "/presentations/proposal.pdf", // opens in the browser's PDF viewer
     available: true,
   },
   {
-    title: "Lanak Link PP1",
+    title: "Lanka-Link PP1",
     subtitle: "Model Prototypes and Early Components", // TODO
     tag: "Progress Presentation 1",
     status: "available",
@@ -199,11 +283,12 @@ export const presentations = [
     stage: "Progress Stage",
     fileType: "PPT",
     actionLabel: "Open PPT",
-    href: "/presentations/progress-1.pptx",
+    href: "/presentations/progress-1.pptx", // download
+    openHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/edit?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true",
     available: true,
   },
   {
-    title: "Lanak Link PP2",
+    title: "Lanka-Link PP2",
     subtitle: "Integration, Explainability and Dashboards", 
     tag: "Progress Presentation 2",
     status: "available",
@@ -211,24 +296,25 @@ export const presentations = [
     stage: "Progress Stage",
     fileType: "PPT",
     actionLabel: "Open PPT",
-    href: "/presentations/progress-2.pptx",
+    href: "/presentations/progress-2.pptx", // download
+    openHref: "", // TODO: Google Drive / Slides link of PP2 (download works without it)
     available: true,
   },
   {
-    title: "Lanak Link Final",
+    title: "Lanka-Link Final",
     subtitle: "Final Research Presentation",
     tag: "Final Presentation",
     status: "upcoming",
-    desc: "Final research presentation slide deck covering the completed Lanak Link system, evaluation results, conclusions, and future enhancements. This is currently upcoming.", // TODO
+    desc: "Final research presentation slide deck covering the completed Lanka-Link system, evaluation results, conclusions, and future enhancements. This is currently upcoming.", // TODO
     stage: "Final Stage",
     fileType: "Upcoming",
     actionLabel: "Open Folder",
-    href: "/presentations/final.pdf",
-    available: true, // TODO: Change to false if the final presentation is not yet available
+    href: "",
+    available: false, // set true (and add the file / link) once the final deck is ready
   },
 ];
 export const contact = {
-  generalEmail: "lanaklink.team@example.com",
+  generalEmail: "lankalink.team@example.com",
   supervisorEmail: "shanta.y@sliit.lk", 
   institution: "Sri Lanka Institute of Information Technology (SLIIT)", 
   subjects: [
@@ -249,7 +335,7 @@ export const team = {
       faculty: "Faculty of Business", // TODO
       department: "Department of Information Management",
       email: "shanta.y@sliit.lk",
-      linkType: "scholar",
+      linkType: "scholar" as const,
       link: "https://scholar.google.com/citations?user=hX9X2RYAAAAJ&hl=en",
     },
     {
@@ -260,7 +346,7 @@ export const team = {
       faculty: "Faculty of Business",
       department: "Computer Systems Engineering",
       email: "suwani.h@sliit.lk",
-      linkType: "scholar",
+      linkType: "scholar" as const,
       link: "https://scholar.google.com/citations?user=udSXe-MAAAAJ&hl=en",
     },
   ],
@@ -271,14 +357,14 @@ export const team = {
       role: "Group Member",
       componentRole: "Demand Forecast Component",
       description:
-        "TODO: One or two sentences on what this component does and this member's contribution.",
-      tags: ["Forecasting", "Time Series", "TODO Tag"],
+        "Forecasts next week’s sales of every item from past sales, prices and the Avurudu / festival season, and turns the forecast into a reorder point with safety stock so the shop neither runs out nor over-stocks.",
+      tags: ["Forecasting", "Time Series", "Random Forest", "Inventory"],
       photo: "/images/m2.png",
       university: "Sri Lanka Institute of Information Technology",
       faculty: "Faculty of Computing",
       department: "Computer Systems Engineering", // TODO: confirm
       email: "parameeaponsu@icloud.com",
-      linkType: "linkedin",
+      linkType: "linkedin" as const,
       link: "https://www.linkedin.com/in/paramee-aponsu-61b43836a/",
     },
     {
@@ -287,30 +373,30 @@ export const team = {
       role: "Group Member",
       componentRole: "Inventory and Supplier Management Component",
       description:
-        "TODO: One or two sentences on what this component does and this member's contribution.",
-      tags: ["Risk Analysis", "TODO Tag"],
+        "Keeps stock in FIFO batches with low-stock and out-of-stock alerts and delivery lead times, and manages suppliers — the items and prices they carry and their location on the map, with the road route and distance from the shop.",
+      tags: ["Inventory", "FIFO", "Suppliers", "Google Maps"],
       photo: "/images/m3.png",
       university: "Sri Lanka Institute of Information Technology",
       faculty: "Faculty of Computing",
       department: "Computer Systems Engineering", // TODO: confirm
       email: "sathirapramudith1@gmail.com",
-      linkType: "linkedin",
+      linkType: "linkedin" as const,
       link: "https://www.linkedin.com/in/sathira-pramudith-805284318/",
     },
     {
       name: "Ruwani P A M J",
       studentId: "IT22268730",
       role: "Group Member",
-      componentRole: "Smart Procurement &  decision Support Component",
+      componentRole: "Smart Procurement & Decision Support Component",
       description:
-        "TODO: One or two sentences on what this component does and this member's contribution.",
-      tags: ["Classification", "SHAP", "TODO Tag"],
+        "Builds purchase orders and ranks suppliers by items covered, price and distance, and uses market-price trends to advise whether to buy now or wait — saving about 2.2 % of the purchase bill on unseen weeks.",
+      tags: ["Procurement", "Classification", "Random Forest", "SHAP"],
       photo: "/images/m1.png",
       university: "Sri Lanka Institute of Information Technology",
       faculty: "Faculty of Computing",
       department: "Computer Systems Engineering", // TODO: confirm
       email: "maheshajayaruwani@gmail.com",
-      linkType: "linkedin",
+      linkType: "linkedin" as const,
       link: "https://www.linkedin.com/in/mahesha-jayaruwani-0507a4362/",
     },
     {
@@ -319,14 +405,14 @@ export const team = {
       role: "Group Leader",
       componentRole: "Simulated Agency Banking Component",
       description:
-        "TODO: One or two sentences on what this component does and this member's contribution.",
-      tags: ["Classification", "TODO Tag"],
+        "Simulates agency banking for customers — deposits, withdrawals and transfers with CBSL daily limits, float accounts per bank and a shared cash pool — and flags unusual transactions with an explainable XGBoost model.",
+      tags: ["Agency Banking", "Anomaly Detection", "XGBoost", "CBSL Limits"],
       photo: "/images/m4.png",
       university: "Sri Lanka Institute of Information Technology",
       faculty: "Faculty of Computing",
       department: "Computer Systems Engineering", // TODO: confirm
       email: "lakshithakarunaweera@gmail.com",
-      linkType: "linkedin",
+      linkType: "linkedin" as const,
       link: "https://www.linkedin.com/in/lakshithakarunaweera/",
     },
   ],
@@ -338,12 +424,12 @@ export const documentSections = [
   {
     icon: "📑",
     title: "Research Paper",
-    desc: "Official research paper prepared for the Lanak Link research project.",
+    desc: "Official research paper prepared for the Lanka-Link research project.",
     documents: [
       {
         fileType: "PDF",
-        title: "Lanak Link Research Paper",
-        desc: "Research paper presenting the Lanak Link project background, research problem, methodology, implementation, evaluation, results, and conclusions.", // TODO
+        title: "Lanka-Link Research Paper",
+        desc: "Research paper presenting the Lanka-Link project background, research problem, methodology, implementation, evaluation, results, and conclusions.", // TODO
         tag: "Research Paper",
         status: "upcoming", // "available" | "upcoming"
         actionLabel: "Open PDF",
@@ -355,12 +441,12 @@ export const documentSections = [
   {
     icon: "📁",
     title: "Group Research Documents",
-    desc: "Group-level research documents prepared for the complete Lanak Link project.",
+    desc: "Group-level research documents prepared for the complete Lanka-Link project.",
     documents: [
       {
         fileType: "PDF",
         title: "Group Thesis Report",
-        desc: "Final group thesis report covering the complete Lanak Link research system, methodology, implementation, evaluation, results, conclusions, and future enhancements.", // TODO
+        desc: "Final group thesis report covering the complete Lanka-Link research system, methodology, implementation, evaluation, results, conclusions, and future enhancements.", // TODO
         tag: "Final Report",
         status: "upcoming",
         actionLabel: "Open PDF",
@@ -372,7 +458,7 @@ export const documentSections = [
   {
     icon: "📊",
     title: "Presentation Slide Decks",
-    desc: "Presentation files prepared during the Lanak Link research project.",
+    desc: "Presentation files prepared during the Lanka-Link research project.",
     documents: [
       {
         fileType: "PDF",
@@ -382,7 +468,7 @@ export const documentSections = [
         status: "available",
         actionLabel: "Open PDF",
         openHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/view?usp=sharing", // TODO
-        downloadHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/download?usp=sharing", // TODO
+        downloadHref: "https://drive.google.com/uc?export=download&id=1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L", // TODO
       },
       {
         fileType: "PPT",
@@ -392,7 +478,7 @@ export const documentSections = [
         status: "available",
         actionLabel: "Open PPT",
         openHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/edit?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
-        downloadHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/download?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
+        downloadHref: "https://drive.google.com/uc?export=download&id=1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef", // TODO
       },
       {
         fileType: "PPT",
@@ -401,13 +487,13 @@ export const documentSections = [
         tag: "Progress Presentation 2",
         status: "available",
         actionLabel: "Open PPT",
-        openHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/edit?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
-        downloadHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/download?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
+        openHref: "", // TODO: PP2 Google Drive "view" link (it used PP1's link by mistake)
+        downloadHref: "/presentations/progress-2.pptx",
       },
       {
         fileType: "PPT",
         title: "Final Presentation PPT",
-        desc: "Final research presentation slide deck covering the completed Lanak Link system, evaluation results, conclusions, and future enhancements.", // TODO
+        desc: "Final research presentation slide deck covering the completed Lanka-Link system, evaluation results, conclusions, and future enhancements.", // TODO
         tag: "Final Presentation",
         status: "upcoming",
         actionLabel: "Open PPT",
@@ -419,7 +505,7 @@ export const documentSections = [
   {
     icon: "📄",
     title: "Individual Proposal Reports",
-    desc: "Individual proposal reports prepared by each Lanak Link research team member.",
+    desc: "Individual proposal reports prepared by each Lanka-Link research team member.",
     documents: [
       {
         fileType: "PDF",
@@ -466,7 +552,7 @@ export const documentSections = [
   {
     icon: "📚",
     title: "Individual Thesis Reports",
-    desc: "Final individual thesis reports prepared for each Lanak Link research component.",
+    desc: "Final individual thesis reports prepared for each Lanka-Link research component.",
     documents: [
       {
         fileType: "PDF",

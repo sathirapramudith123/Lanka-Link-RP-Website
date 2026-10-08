@@ -1,5 +1,5 @@
-import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
+import Avatar from "@/components/Avatar";
+import PageHero from "@/components/PageHero";
 import { team } from "@/data/content";
 
 type Person = {
@@ -53,7 +53,7 @@ function MemberCard({ member }: { member: Member }) {
     <div className="card">
       <div className="flex items-start gap-4">
         <div className="relative h-16 w-14 shrink-0 overflow-hidden rounded-lg bg-slate-100">
-          <Image src={photo} alt={name} fill className="object-cover" sizes="56px" />
+          <Avatar src={photo} name={name} sizes="56px" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center justify-between gap-2">
@@ -116,7 +116,7 @@ function PersonCard({ person }: { person: Person }) {
     <div className="card">
       <div className="flex items-center gap-5">
         <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl bg-slate-100">
-          <Image src={photo} alt={name} fill className="object-cover" sizes="112px" />
+          <Avatar src={photo} name={name} sizes="112px" />
         </div>
         <div>
           <h3 className="font-display text-lg font-bold text-slate-900">{name}</h3>
@@ -171,12 +171,13 @@ function PersonCard({ person }: { person: Person }) {
 
 export default function AboutPage() {
   return (
-    <div className="container-page py-16">
-      <SectionHeader
+    <>
+      <PageHero
         eyebrow="About Us"
         title="The Research Team"
         subtitle="The students and supervisors behind this research project."
       />
+      <div className="container-page py-14">
 
       <div className="mt-12">
         <h3 className="mb-6 text-center text-sm font-bold uppercase tracking-[0.2em] text-slate-800">
@@ -200,5 +201,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

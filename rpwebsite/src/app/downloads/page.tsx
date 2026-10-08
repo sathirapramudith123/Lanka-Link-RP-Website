@@ -1,16 +1,17 @@
-import SectionHeader from "@/components/SectionHeader";
+import PageHero from "@/components/PageHero";
 import { documentSections } from "@/data/content";
 import { cn } from "@/utils/cn";
+import ActionLink from "@/components/ActionLink";
 
 export default function DownloadsPage() {
   return (
-    <div className="container-page py-16">
-      <SectionHeader
+    <>
+      <PageHero
         eyebrow="Project Documents"
         title="Research Documents"
-        subtitle="Official research paper, presentation slide decks, individual proposal reports, thesis reports, and group thesis report prepared for the Lanak Link research project."
-        center
+        subtitle="Official research paper, presentation slide decks, individual proposal reports, thesis reports, and group thesis report prepared for the Lanka-Link research project."
       />
+      <div className="container-page py-14">
 
       <div className="mt-14 space-y-14">
         {documentSections.map((section) => (
@@ -65,30 +66,16 @@ export default function DownloadsPage() {
                     </p>
 
                     <div className="mt-5 flex gap-3">
-                      <a
-                        href={isAvailable && doc.openHref ? doc.openHref : "#"}
-                        target={isAvailable && doc.openHref ? "_blank" : undefined}
-                        rel="noreferrer"
-                        className={cn(
-                          "flex-1 rounded-xl px-4 py-2.5 text-center text-sm font-semibold transition",
-                          isAvailable && doc.openHref
-                            ? "bg-brand text-white hover:bg-brand-800"
-                            : "cursor-not-allowed bg-slate-100 text-slate-400"
-                        )}
-                      >
+                      <ActionLink href={isAvailable ? doc.openHref : undefined}>
                         {doc.actionLabel}
-                      </a>
-                      <a
-                        href={isAvailable && doc.downloadHref ? doc.downloadHref : "#"}
-                        className={cn(
-                          "flex-1 rounded-xl border px-4 py-2.5 text-center text-sm font-semibold transition",
-                          isAvailable && doc.downloadHref
-                            ? "border-slate-200 text-slate-700 hover:bg-slate-50"
-                            : "cursor-not-allowed border-slate-100 text-slate-300"
-                        )}
+                      </ActionLink>
+                      <ActionLink
+                        href={isAvailable ? doc.downloadHref : undefined}
+                        variant="outline"
+                        download
                       >
                         Download
-                      </a>
+                      </ActionLink>
                     </div>
                   </div>
                 );
@@ -98,11 +85,7 @@ export default function DownloadsPage() {
         ))}
       </div>
 
-      <p className="mt-12 text-center text-xs text-slate-400">
-        Fill in <code>openHref</code> / <code>downloadHref</code> and set{" "}
-        <code>status: &quot;available&quot;</code> for each document in{" "}
-        <code>content.ts</code>.
-      </p>
     </div>
+    </>
   );
 }

@@ -1,16 +1,17 @@
-import SectionHeader from "@/components/SectionHeader";
+import PageHero from "@/components/PageHero";
 import { presentations } from "@/data/content";
 import { cn } from "@/utils/cn";
+import ActionLink from "@/components/ActionLink";
 
 export default function PresentationsPage() {
   return (
-    <div className="container-page py-16">
-      <SectionHeader
+    <>
+      <PageHero
         eyebrow="Slides"
         title="Research Presentations"
-        subtitle="Proposal, progress, and upcoming final presentation slide decks prepared during the Lanak Link research project."
-        center
+        subtitle="Proposal, progress, and upcoming final presentation slide decks prepared during the Lanka-Link research project."
       />
+      <div className="container-page py-14">
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {presentations.map((p) => {
@@ -60,29 +61,12 @@ export default function PresentationsPage() {
                 <div className="mt-6 flex gap-3">
                   {isAvailable ? (
                     <>
-                      <a
-                        href={p.available ? p.href : "#"}
-                        className={cn(
-                          "flex-1 rounded-xl px-4 py-2.5 text-center text-sm font-semibold transition",
-                          p.available
-                            ? "bg-brand text-white hover:bg-brand-800"
-                            : "cursor-not-allowed bg-slate-100 text-slate-400"
-                        )}
-                      >
+                      <ActionLink href={p.available ? p.openHref : undefined}>
                         {p.actionLabel}
-                      </a>
-                      <a
-                        href={p.available ? p.href : "#"}
-                        download={p.available}
-                        className={cn(
-                          "flex-1 rounded-xl border px-4 py-2.5 text-center text-sm font-semibold transition",
-                          p.available
-                            ? "border-slate-200 text-slate-700 hover:bg-slate-50"
-                            : "cursor-not-allowed border-slate-100 text-slate-300"
-                        )}
-                      >
+                      </ActionLink>
+                      <ActionLink href={p.available ? p.href : undefined} variant="outline" download>
                         Download
-                      </a>
+                      </ActionLink>
                     </>
                   ) : (
                     <span className="flex-1 rounded-xl bg-slate-100 px-4 py-2.5 text-center text-sm font-medium text-slate-400">
@@ -96,10 +80,7 @@ export default function PresentationsPage() {
         })}
       </div>
 
-      <p className="mt-10 text-center text-xs text-slate-400">
-        Put files in <code>/public/presentations/</code>, then set{" "}
-        <code>available: true</code> in <code>content.ts</code>.
-      </p>
     </div>
+    </>
   );
 }

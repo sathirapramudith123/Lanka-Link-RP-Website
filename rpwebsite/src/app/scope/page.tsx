@@ -1,5 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import Image from "next/image";
-import SectionHeader from "@/components/SectionHeader";
+import PageHero from "@/components/PageHero";
 import { scope, components } from "@/data/content";
 
 function TextSection({
@@ -46,16 +48,22 @@ function TextSection({
 }
 
 export default function ScopePage() {
+  // only show figures whose file is really in /public (missing ones would render broken)
   const findImage = (caption: string) =>
-    scope.images.find((img) => img.caption === caption);
+    scope.images.find(
+      (img) =>
+        img.caption === caption &&
+        fs.existsSync(path.join(process.cwd(), "public", img.src))
+    );
 
   return (
-    <div className="container-page py-16">
-      <SectionHeader
+    <>
+      <PageHero
         eyebrow="Domain"
         title="Research Scope & Methodology"
         subtitle={scope.intro}
       />
+      <div className="container-page py-14">
 
       <TextSection
         heading={scope.literatureSurvey.heading}
@@ -154,5 +162,6 @@ export default function ScopePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
