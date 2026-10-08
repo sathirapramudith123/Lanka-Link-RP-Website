@@ -3,6 +3,8 @@ import path from "node:path";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { scope, components } from "@/data/content";
+import DiagramCard from "@/components/diagrams/DiagramCard";
+import { diagrams } from "@/components/diagrams/SystemDiagrams";
 
 function TextSection({
   heading,
@@ -162,6 +164,40 @@ export default function ScopePage() {
         </div>
       </div>
     </div>
+
+      {/* ============================ SYSTEM DIAGRAMS ============================ */}
+      <section id="diagrams" className="gradient-hero relative mt-10 overflow-hidden py-20">
+        <div className="grid-pattern absolute inset-0" aria-hidden="true" />
+        <div className="container-page relative">
+          <span className="eyebrow !bg-white/10 !text-brand-200">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            System design
+          </span>
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">System Diagrams</h2>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">
+            The architecture, the end-to-end workflow, how the models connect, the research pipeline, and the two
+            core business workflows of Lanka-Link.
+          </p>
+          <nav className="mt-6 flex flex-wrap gap-2" aria-label="Diagrams">
+            {diagrams.map((d, i) => (
+              <a
+                key={d.id}
+                href={`#${d.id}`}
+                className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:bg-white/15"
+              >
+                {String(i + 1).padStart(2, "0")} · {d.title}
+              </a>
+            ))}
+          </nav>
+          <div className="mt-10 space-y-10">
+            {diagrams.map(({ id, title, desc, Diagram }, i) => (
+              <DiagramCard key={id} id={id} index={i + 1} title={title} desc={desc}>
+                <Diagram />
+              </DiagramCard>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

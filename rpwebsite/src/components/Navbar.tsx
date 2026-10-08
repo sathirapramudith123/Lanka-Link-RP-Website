@@ -11,7 +11,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const isActive = (href: string) =>
+    href.includes("#") ? false : href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   // a stronger shadow once the page has scrolled
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <Link href="/downloads" className="btn-primary hidden !rounded-full !py-2 lg:inline-flex">
+        <Link href="/downloads" className="btn-primary hidden !rounded-full !py-2 xl:inline-flex">
           Documents ↗
         </Link>
 

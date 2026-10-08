@@ -52,6 +52,12 @@ export default function HomePage() {
               >
                 Read the documents
               </Link>
+              <Link
+                href="/scope#architecture"
+                className="rounded-xl px-4 py-3 text-sm font-semibold text-brand-200 transition hover:text-white"
+              >
+                🗺️ System architecture
+              </Link>
             </div>
           </div>
           <HeroIllustration />

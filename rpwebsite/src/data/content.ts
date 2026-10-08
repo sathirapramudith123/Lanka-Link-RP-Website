@@ -12,6 +12,7 @@ export const site = {
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/scope", label: "Domain" },
+  { href: "/scope#architecture", label: "Architecture" },
   { href: "/milestones", label: "Milestones" },
   { href: "/downloads", label: "Documents" },
   { href: "/presentations", label: "Presentations" },
@@ -297,7 +298,7 @@ export const presentations = [
     fileType: "PPT",
     actionLabel: "Open PPT",
     href: "/presentations/progress-2.pptx", // download
-    openHref: "", // TODO: Google Drive / Slides link of PP2 (download works without it)
+    openHref: "https://docs.google.com/presentation/d/18AOQX9Y_VmhB6oD7GbxUNbMfpXwNiszq/edit?usp=sharing&ouid=101829673040225473750&rtpof=true&sd=true",
     available: true,
   },
   {
@@ -487,8 +488,8 @@ export const documentSections = [
         tag: "Progress Presentation 2",
         status: "available",
         actionLabel: "Open PPT",
-        openHref: "", // TODO: PP2 Google Drive "view" link (it used PP1's link by mistake)
-        downloadHref: "/presentations/progress-2.pptx",
+        openHref: "https://docs.google.com/presentation/d/18AOQX9Y_VmhB6oD7GbxUNbMfpXwNiszq/edit?usp=sharing&ouid=101829673040225473750&rtpof=true&sd=true",
+        downloadHref: "https://drive.google.com/uc?export=download&id=18AOQX9Y_VmhB6oD7GbxUNbMfpXwNiszq",
       },
       {
         fileType: "PPT",
