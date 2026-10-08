@@ -1,507 +1,162 @@
-# 🎓 Research Project Website
+# 🎓 Lanka-Link — Research Project Website
 
 <p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-Website-black?style=for-the-badge&logo=next.js">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Developed-blue?style=for-the-badge&logo=typescript">
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-Styling-06B6D4?style=for-the-badge&logo=tailwindcss">
-  <img alt="React" src="https://img.shields.io/badge/React-UI-61DAFB?style=for-the-badge&logo=react">
-  <img alt="Research" src="https://img.shields.io/badge/Research-Final%20Year%20Project-purple?style=for-the-badge">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-Website-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img alt="No JavaScript" src="https://img.shields.io/badge/JavaScript-None-lightgrey?style=for-the-badge">
+  <img alt="Size" src="https://img.shields.io/badge/Size-8.3%20MB%20%2F%2020%20MB-success?style=for-the-badge">
+  <img alt="SLIIT" src="https://img.shields.io/badge/SLIIT-R26--IT--139-purple?style=for-the-badge">
 </p>
 
 <p align="center">
-  <b>Research Project Website</b><br>
-  Academic Research Project Presentation & Information Platform
+  <b>Smart Merchant Support Platform for Agency Banking and Procurement</b><br>
+  Research project website — IT4010 Research Project, R26-IT-139, SLIIT
 </p>
 
 ---
 
 ## ✨ About This Website
 
-This website is the official **Research Project Website** developed to present and communicate the research project in a clear, modern, and professional format.
+This is the official website of the **Lanka-Link** research project. It presents the research — its domain, milestones, documents, presentation slides and the team — to supervisors, examiners and other visitors.
 
-The website provides a centralized platform for presenting the research background, project scope, objectives, milestones, project-related resources, team information, and contact details.
+It is built to the **SLIIT research-website guideline**:
 
-It is designed for **lecturers, supervisors, evaluators, students, and other visitors** who need to understand the research project and its progress.
-
-The website acts as the public-facing presentation layer of the research project and provides easy access to important project information and resources.
-
----
-
-## 🎯 Project Overview
-
-The **Research Project Website** is a modern academic web application developed using **Next.js, React, TypeScript, and Tailwind CSS**.
-
-The main purpose of the system is to provide an organized and visually engaging platform for presenting the research project and its development progress.
-
-The website brings together important research information including:
-
-* Research project background
-* Research scope
-* Project objectives
-* Project milestones
-* Research-related downloads
-* Team member information
-* Contact information
-* Project updates and resources
-
-The application follows a component-based architecture to maintain a clean, reusable, and scalable codebase.
+| Guideline requirement | This website |
+| --- | --- |
+| Technology: WordPress, HTML, CSS | Plain **HTML + CSS** — no JavaScript, no framework, no server |
+| Disk space: maximum 20 MB | **8.3 MB** |
+| Tabs: Home, Domain, Milestones, Documents, Presentations, About us, Contact us | ✅ all seven, same navigation on every page |
 
 ---
 
-## 🔍 What the Website Showcases
+## 📄 Pages
 
-The website presents the research project through several dedicated sections and pages.
-
-### 🏠 Home
-
-The Home page provides an introduction to the research project and acts as the main entry point for visitors.
-
-It highlights:
-
-* Project introduction
-* Research overview
-* Key information
-* Visual presentation
-* Navigation to important sections
-
----
-
-### 🎯 Research Scope
-
-The Scope page explains the research domain and the boundaries of the project.
-
-It presents information such as:
-
-* Research background
-* Problem area
-* Research objectives
-* Project scope
-* Key areas covered by the research
-* Research direction
-
----
-
-### 📅 Project Milestones
-
-The Milestones page presents the academic and development progress of the research project.
-
-It can be used to showcase:
-
-* Project phases
-* Assessment milestones
-* Research activities
-* Development progress
-* Important project dates
-* Academic progress
-
-This provides evaluators and supervisors with a clear overview of the project's development journey.
-
----
-
-### 📥 Downloads
-
-The Downloads page provides access to important project-related resources and documents.
-
-These may include:
-
-* Research documents
-* Reports
-* Project resources
-* Supporting materials
-* Academic documents
-* Other downloadable files
-
-The page provides a centralized location for visitors to access project resources.
-
----
-
-### 👥 About
-
-The About page provides information about the research team and the people involved in the project.
-
-It can include:
-
-* Team members
-* Student IDs
-* Student roles
-* Contact information
-* Supervisor information
-* Research project details
-
----
-
-### 📧 Contact
-
-The Contact page provides project-related contact information and allows visitors to find the appropriate communication channels for the research team.
-
-It is designed to make communication regarding the research project simple and accessible.
-
----
-
-## 🧩 Main Website Components
-
-The project uses reusable React components to maintain consistency throughout the application.
-
-### 🧭 Navigation Bar
-
-The `Navbar` component provides the main navigation system for moving between different pages of the research website.
-
-### 🦶 Footer
-
-The `Footer` component provides common footer information and navigation elements across the website.
-
-### 🎨 Hero Illustration
-
-The `HeroIllustration` component provides the main visual element used within the website's hero section.
-
-### 📑 Section Header
-
-The `SectionHeader` component provides a consistent heading and introduction style for different sections of the website.
-
-### 📐 Layout
-
-The `Layout` component helps maintain a consistent page structure and shared UI elements throughout the application.
-
----
-
-## 📄 Main Website Pages
-
-The project currently includes the following pages:
-
-| Page       | Route         | Description                           |
-| ---------- | ------------- | ------------------------------------- |
-| Home       | `/`           | Research project introduction         |
-| Scope      | `/scope`      | Research background and project scope |
-| Milestones | `/milestones` | Project progress and milestones       |
-| Downloads  | `/downloads`  | Project documents and resources       |
-| About      | `/about`      | Team and supervisor information       |
-| Contact    | `/contact`    | Project contact information           |
+| Page | File | Content (as the guideline asks) |
+| --- | --- | --- |
+| Home | `index.html` | Project introduction, the four research components, key results |
+| Domain | `domain.html` | Literature survey, research gap, research problem, objectives, methodology, technologies, system diagrams |
+| Milestones | `milestones.html` | Every assessment — details, date and marks — chosen from a drop-down menu, plus the full timeline |
+| Documents | `documents.html` | Project charter, proposal, check lists, research paper, thesis reports (links; pending ones marked "Coming soon") |
+| Presentations | `presentations.html` | Proposal, Progress Presentation 1 and 2 slide decks; Final presentation (upcoming) |
+| About Us | `about.html` | Supervisors and group members — photo, student ID, component, e-mail |
+| Contact Us | `contact.html` | Team e-mails, supervisor, and an e-mail form (opens the visitor's e-mail program) |
 
 ---
 
 ## 🏗️ Project Structure
 
 ```text
-RP-Website/
+Lanka-Link-RP-Website/
 │
-├── rpwebsite/
+├── static-site/              ← the website (upload everything inside this folder)
+│   ├── index.html            Home
+│   ├── domain.html           Domain
+│   ├── milestones.html       Milestones
+│   ├── documents.html        Documents
+│   ├── presentations.html    Presentations
+│   ├── about.html            About Us
+│   ├── contact.html          Contact Us
 │   │
-│   ├── public/
-│   │   ├── favicon.svg
-│   │   ├── file.svg
-│   │   ├── globe.svg
-│   │   ├── next.svg
-│   │   ├── vercel.svg
-│   │   └── window.svg
-│   │
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── about/
-│   │   │   │   └── page.tsx
-│   │   │   │
-│   │   │   ├── contact/
-│   │   │   │   └── page.tsx
-│   │   │   │
-│   │   │   ├── downloads/
-│   │   │   │   └── page.tsx
-│   │   │   │
-│   │   │   ├── milestones/
-│   │   │   │   └── page.tsx
-│   │   │   │
-│   │   │   ├── scope/
-│   │   │   │   └── page.tsx
-│   │   │   │
-│   │   │   ├── favicon.ico
-│   │   │   ├── globals.css
-│   │   │   ├── layout.tsx
-│   │   │   ├── not-found.tsx
-│   │   │   └── page.tsx
-│   │   │
-│   │   ├── components/
-│   │   │   ├── Footer.tsx
-│   │   │   ├── HeroIllustration.tsx
-│   │   │   ├── Layout.tsx
-│   │   │   ├── Navbar.tsx
-│   │   │   └── SectionHeader.tsx
-│   │   │
-│   │   ├── data/
-│   │   │   └── content.ts
-│   │   │
-│   │   └── utils/
-│   │       └── cn.ts
-│   │
-│   ├── .gitignore
-│   ├── eslint.config.mjs
-│   ├── next-env.d.ts
-│   ├── next.config.ts
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.mjs
-│   ├── tailwind.config.js
-│   └── tsconfig.json
+│   ├── css/
+│   │   └── style.css         the only stylesheet
+│   ├── images/               team and supervisor photos (.jpg)
+│   │   └── diagrams/         the six system diagrams (.png)
+│   ├── presentations/        slide decks (.pptx)
+│   ├── favicon.ico
+│   └── favicon.svg
 │
-├── .gitignore
-├── .gitKeep
-├── package.json
-└── README.md
+├── README.md
+└── package.json
 ```
+
+All links between pages and to files are **relative** (`about.html`, `images/m1.jpg`, …), so the folder works from any location — on the course web, in a sub-folder, or opened straight from the disk.
+
+---
+
+## ▶️ Viewing the Website
+
+### Option 1 — open the file
+
+Open `static-site/index.html` in any browser (double-click it). No installation is needed.
+
+### Option 2 — a local web server
+
+To view it exactly as the course web will serve it:
+
+```bash
+python -m http.server 8080 --directory static-site
+```
+
+Then open <http://localhost:8080>. Stop the server with `Ctrl + C`.
+
+---
+
+## ⬆️ Uploading to the Course Web
+
+1. Upload **everything inside** `static-site/` — the `.html` files and the `css/`, `images/` and `presentations/` folders.
+2. Keep the folder structure as it is — the pages refer to `css/style.css`, `images/…` and so on.
+3. The start page is `index.html`.
+
+Total size: **8.3 MB** of the 20 MB allowed.
+
+---
+
+## ✏️ Updating the Content
+
+The pages are plain HTML, so content is edited directly in the `.html` files:
+
+| What to change | Where |
+| --- | --- |
+| Milestone dates and marks (currently "TBA") | `milestones.html` — both the drop-down panels and the timeline |
+| Document links (Google Drive) | `documents.html` — the `href` of the "Open" / "Download" buttons |
+| A new slide deck | put the file in `presentations/` and link it from `presentations.html` |
+| A member photo | put a `.jpg` in `images/` and use it in `about.html` |
+
+The **navigation bar and footer are repeated on every page** — when you change them, change all seven files.
+
+### How the interactive parts work without JavaScript
+
+| Feature | Done with |
+| --- | --- |
+| Phone menu (☰) | a hidden checkbox and its `<label>` — CSS shows the menu when it is checked |
+| Milestone drop-down | a CSS menu that opens on hover / tap; each assessment links to a `#panel`, and `:target` shows it |
+| Milestone filter (All / Completed / Upcoming) | radio buttons and their labels — CSS hides the other cards |
+| Contact form | a normal `<form action="mailto:…">` — the visitor's e-mail program sends the message |
 
 ---
 
 ## 🛠️ Built With
 
-The website is developed using the following technologies:
+* **HTML5** — the seven pages
+* **CSS3** — one stylesheet (`css/style.css`), responsive for phone, tablet and desktop
+* **Google Fonts** — Inter and Space Grotesk (the pages fall back to system fonts when offline)
 
-### Frontend
-
-* **Next.js** – React framework for building the web application
-* **React** – Component-based user interface development
-* **TypeScript** – Type-safe application development
-* **Tailwind CSS** – Utility-first CSS framework
-* **CSS** – Custom styling and responsive design
-
-### Development Tools
-
-* **Node.js**
-* **npm**
-* **Visual Studio Code**
-* **ESLint**
-* **Git & GitHub**
-
----
-
-## ⚙️ Application Architecture
-
-The project follows the modern **Next.js App Router** structure.
-
-```text
-src/
-│
-├── app/
-│   ├── Page Routes
-│   ├── Global Layout
-│   └── Global Styles
-│
-├── components/
-│   └── Reusable UI Components
-│
-├── data/
-│   └── Website Content
-│
-└── utils/
-    └── Utility Functions
-```
-
-This structure separates pages, reusable components, content, and utility functions to improve maintainability and organization.
-
----
-
-## 🎨 Website Design
-
-The website is designed with an emphasis on:
-
-* Modern academic presentation
-* Clean user interface
-* Responsive design
-* Consistent visual hierarchy
-* Easy navigation
-* Reusable components
-* Professional research presentation
-
-The design is intended to provide a clear experience for both technical and non-technical visitors.
+Dark navy theme with blue / green accents, a faint grid background and card-based layout. Every page shares the same header, navigation and footer.
 
 ---
 
 ## 📱 Responsive Design
 
-The website is designed to provide a responsive experience across different screen sizes, including:
-
-* 💻 Desktop
-* 🖥️ Laptop
-* 📱 Mobile
-* 📟 Tablet
-
-The interface adapts its layout and components according to the available screen size.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure the following software is installed:
-
-* Node.js
-* npm
-* Git
-
-You can verify the installations using:
-
-```bash
-node -v
-npm -v
-git --version
-```
-
----
-
-### 📥 Clone the Repository
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-```
-
-Navigate to the project directory:
-
-```bash
-cd RP-Website
-```
-
-Then navigate to the Next.js application:
-
-```bash
-cd rpwebsite
-```
-
----
-
-### 📦 Install Dependencies
-
-Run:
-
-```bash
-npm install
-```
-
-This installs all required project dependencies.
-
----
-
-### ▶️ Run the Development Server
-
-Start the Next.js development server:
-
-```bash
-npm run dev
-```
-
-The application will normally be available at:
-
-```text
-http://localhost:3000
-```
-
-Open the URL in your browser to view the research project website.
-
----
-
-## 🏗️ Build for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-After a successful build, start the production server using:
-
-```bash
-npm start
-```
-
----
-
-## 🧹 Code Quality
-
-The project uses ESLint to help maintain code quality and consistency.
-
-Run:
-
-```bash
-npm run lint
-```
-
-This checks the project source code for common issues and coding problems.
-
----
-
-## 📌 Purpose of This Repository
-
-This repository contains the source code for the **Research Project Website**.
-
-It is used to:
-
-* Present the research project professionally
-* Maintain research-related website content
-* Showcase project scope and objectives
-* Track and present project milestones
-* Provide access to research documents
-* Present team and supervisor information
-* Provide project contact information
-* Support academic evaluations and presentations
-
----
-
-## 🎓 Academic Context
-
-This website has been developed as part of a **Final Year Research Project**.
-
-It serves as the digital presentation platform for the research project and supports the communication of research activities, project progress, documentation, and team information.
+Every page has been checked at phone width (375 px) and on desktop — nothing scrolls sideways, and on phones the navigation collapses into the ☰ menu.
 
 ---
 
 ## 👥 Research Team
 
-**Research Project Group**
-**Sri Lanka Institute of Information Technology (SLIIT)**
-**Final Year Research Project**
+**R26-IT-139 · Sri Lanka Institute of Information Technology (SLIIT)**
 
-The website includes a dedicated **About** section containing information about the research team, student roles, and supervisor details.
+| Member | Student ID | Component |
+| --- | --- | --- |
+| Karunaweera L.M (Team Leader) | IT22050212 | Simulated Agency Banking |
+| Aponsu G.M.P.S | IT22266682 | Demand Forecast |
+| Pramudith K.G.S | IT22152978 | Inventory and Supplier Management |
+| Ruwani P.A.M.J | IT22268730 | Smart Procurement & Decision Support |
 
----
-
-## 📚 Project Resources
-
-The website provides dedicated sections for project resources, including:
-
-* Research documentation
-* Project reports
-* Presentation materials
-* Project milestones
-* Research scope
-* Team information
-* Contact details
-
-These resources help provide a complete overview of the research project.
-
----
-
-## 🔮 Future Improvements
-
-Potential future improvements include:
-
-* Online research progress tracking
-* Dynamic document management
-* Research news and updates
-* Interactive research visualizations
-* Enhanced accessibility
-* Improved mobile experience
-* Online presentation integration
-* Dynamic content management
-* Research analytics dashboard
-
----
-
-## ⭐ Summary
-
-The **Research Project Website** is a modern academic web application designed to present a final-year research project in a clear, organized, and professional manner.
-
-Built using **Next.js, React, TypeScript, and Tailwind CSS**, the website provides dedicated sections for the research scope, project milestones, downloadable resources, team information, and contact details.
-
-It serves as the central online presentation platform for the research project and helps communicate the project's **research direction, progress, resources, and team** to supervisors, evaluators, lecturers, students, and other visitors.
+**Supervisor:** Dr. Shanta Rajapaksha Yapa
+**Co-Supervisor:** Ms. Suwani Hettiarachchi
 
 ---
 
 ## 📄 License
 
-This project is developed for **academic and educational purposes** as part of a final-year research project at SLIIT.
+Developed for **academic and educational purposes** as part of the IT4010 Research Project at SLIIT.
