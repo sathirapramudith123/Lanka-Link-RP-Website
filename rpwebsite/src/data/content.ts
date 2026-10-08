@@ -188,7 +188,7 @@ export const presentations = [
     fileType: "PDF",
     actionLabel: "Open PDF",
     href: "/presentations/proposal.pdf",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link PP1",
@@ -200,7 +200,7 @@ export const presentations = [
     fileType: "PPT",
     actionLabel: "Open PPT",
     href: "/presentations/progress-1.pptx",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link PP2",
@@ -212,7 +212,7 @@ export const presentations = [
     fileType: "PPT",
     actionLabel: "Open PPT",
     href: "/presentations/progress-2.pptx",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link Final",
@@ -224,7 +224,7 @@ export const presentations = [
     fileType: "Upcoming",
     actionLabel: "Open Folder",
     href: "/presentations/final.pdf",
-    available: false,
+    available: true, // TODO: Change to false if the final presentation is not yet available
   },
 ];
 export const contact = {
@@ -347,8 +347,8 @@ export const documentSections = [
         tag: "Research Paper",
         status: "upcoming", // "available" | "upcoming"
         actionLabel: "Open PDF",
-        openHref: "", // TODO: Google Drive "view" link
-        downloadHref: "", // TODO: Google Drive "download" link
+        openHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/view?usp=drive_link", // TODO: Google Drive "view" link
+        downloadHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/download?usp=drive_link", // TODO: Google Drive "download" link
       },
     ],
   },
