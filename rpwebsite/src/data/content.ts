@@ -347,8 +347,8 @@ export const documentSections = [
         tag: "Research Paper",
         status: "upcoming", // "available" | "upcoming"
         actionLabel: "Open PDF",
-        openHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/view?usp=drive_link", // TODO: Google Drive "view" link
-        downloadHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/download?usp=drive_link", // TODO: Google Drive "download" link
+        openHref: "", // TODO: Google Drive "view" link
+        downloadHref: "", // TODO: Google Drive "download" link
       },
     ],
   },
@@ -381,8 +381,8 @@ export const documentSections = [
         tag: "Proposal Presentation",
         status: "available",
         actionLabel: "Open PDF",
-        openHref: "", // TODO
-        downloadHref: "", // TODO
+        openHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/view?usp=sharing", // TODO
+        downloadHref: "https://drive.google.com/file/d/1u6AYZRFNrKaKwAW3aPy969_C-STpFD5L/download?usp=sharing", // TODO
       },
       {
         fileType: "PPT",
@@ -391,8 +391,8 @@ export const documentSections = [
         tag: "Progress Presentation 1",
         status: "available",
         actionLabel: "Open PPT",
-        openHref: "", // TODO
-        downloadHref: "", // TODO
+        openHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/edit?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
+        downloadHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/download?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
       },
       {
         fileType: "PPT",
@@ -401,8 +401,8 @@ export const documentSections = [
         tag: "Progress Presentation 2",
         status: "available",
         actionLabel: "Open PPT",
-        openHref: "", // TODO
-        downloadHref: "", // TODO
+        openHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/edit?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
+        downloadHref: "https://docs.google.com/presentation/d/1mNJnC5VOoYIAsEp3OZgB6lUxzmgje_Ef/download?usp=sharing&ouid=115379467692197163432&rtpof=true&sd=true", // TODO
       },
       {
         fileType: "PPT",
