@@ -1,149 +1,155 @@
-# 🎓 Lanka-Link — Research Project Website
+# 🏪 Lanka-Link Research Introduction Website
 
-<p align="center">
-  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-Website-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-  <img alt="No JavaScript" src="https://img.shields.io/badge/JavaScript-None-lightgrey?style=for-the-badge">
-  <img alt="Size" src="https://img.shields.io/badge/Size-8.3%20MB%20%2F%2020%20MB-success?style=for-the-badge">
-  <img alt="SLIIT" src="https://img.shields.io/badge/SLIIT-R26--IT--139-purple?style=for-the-badge">
-</p>
+## Lanka-Link
 
-<p align="center">
-  <b>Smart Merchant Support Platform for Agency Banking and Procurement</b><br>
-  Research project website — IT4010 Research Project, R26-IT-139, SLIIT
-</p>
+**Smart Merchant Support Platform for Agency Banking and Procurement**
 
 ---
 
 ## ✨ About This Website
 
-This is the official website of the **Lanka-Link** research project. It presents the research — its domain, milestones, documents, presentation slides and the team — to supervisors, examiners and other visitors.
+This website is the official research introduction and presentation website for **Lanka-Link**. It is designed to present the project in a clear, modern, and professional way for lecturers, evaluators, supervisors, students, and other visitors.
 
-It is built to the **SLIIT research-website guideline**:
-
-| Guideline requirement | This website |
-| --- | --- |
-| Technology: WordPress, HTML, CSS | Plain **HTML + CSS** — no JavaScript, no framework, no server |
-| Disk space: maximum 20 MB | **8.3 MB** |
-| Tabs: Home, Domain, Milestones, Documents, Presentations, About us, Contact us | ✅ all seven, same navigation on every page |
+The site introduces the research idea, explains the problem domain, showcases the four AI research components, presents project milestones and documents, and provides information about the team behind the project. Its purpose is to act as the public-facing academic website for the Lanka-Link research project.
 
 ---
 
-## 📄 Pages
+## 🎯 Project Overview
 
-| Page | File | Content (as the guideline asks) |
+**Lanka-Link** is a web and mobile platform for rural Sri Lankan micro-merchants (“kade” owners). It turns a shop’s day-to-day records — sales, stock, suppliers, purchases and agency-banking transactions — into one digital ledger, and builds four explainable machine-learning models on top of it.
+
+Each prediction is explained with **SHAP** in plain language, and every model is compared honestly with the simple rule a shop owner or bank would otherwise use. The platform is available in **English and Sinhala**.
+
+This website highlights the main idea of the research and presents the project in a structured academic format.
+
+---
+
+## 🔍 What the Website Showcases
+
+The Lanka-Link website presents:
+
+* a strong introduction to the research project
+* the main research domain and background
+* the four AI research components and their results
+* the system diagrams of the platform
+* project milestones, dates and marks
+* project documents and presentation materials
+* team member and supervisor information
+* contact details for the project
+
+---
+
+## 🧩 Core Research Components Featured
+
+The website highlights the four Lanka-Link research components:
+
+### 💳 Credit Readiness
+
+Scores a shop from 0 to 100 using its own digital ledger — months active, cash flow, profit margin, digital payments and stock-out rate — and sets an explainable loan limit. Logistic regression, **ROC-AUC 0.839**, and better than standard bank rules (F1 0.75 vs 0.68).
+
+### 🛒 Smart Procurement (Buy Now / Wait)
+
+Predicts whether an item’s market price will rise in the coming weeks and advises the shop owner to buy now or wait. Suppliers are ranked by items covered, price and distance. Random forest, saving about **2.2 %** of the purchase bill on unseen weeks.
+
+### 📦 Weekly Demand Forecast
+
+Forecasts next week’s sales of every item, including Avurudu and festival effects, and turns the forecast into a reorder point with safety stock. Random forest, **21.7 %** lower error than “same as last week”.
+
+### 🏦 Agency Banking Anomaly Detection
+
+Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input, cutting false alarms from **136 to 19** per 1,000 honest customers.
+
+---
+
+## 🖥️ Main Website Pages
+
+The website includes the following pages:
+
+* **Home** – project introduction, the four AI components, results and key capabilities
+* **Domain** – literature survey, research gap, research problem, objectives, methodology, system diagrams and technologies
+* **Milestones** – the five graded assessments with dates, marks and progress
+* **Documents** – project charter, proposal, check lists, research paper and thesis reports
+* **Presentations** – proposal and progress presentation slides
+* **About Us** – team member and supervisor details
+* **Contact Us** – project contact information and a message form
+
+---
+
+## 📅 Assessment Milestones
+
+| Assessment | Date | Marks |
 | --- | --- | --- |
-| Home | `index.html` | Project introduction, the four research components, key results |
-| Domain | `domain.html` | Literature survey, research gap, research problem, objectives, methodology, technologies, system diagrams |
-| Milestones | `milestones.html` | Every assessment — details, date and marks — chosen from a drop-down menu, plus the full timeline |
-| Documents | `documents.html` | Project charter, proposal, check lists, research paper, thesis reports (links; pending ones marked "Coming soon") |
-| Presentations | `presentations.html` | Proposal, Progress Presentation 1 and 2 slide decks; Final presentation (upcoming) |
-| About Us | `about.html` | Supervisors and group members — photo, student ID, component, e-mail |
-| Contact Us | `contact.html` | Team e-mails, supervisor, and an e-mail form (opens the visitor's e-mail program) |
+| Project Proposal | 15 – 18 March 2026 | 6% |
+| Progress Presentation – 1 | 11 – 13 May 2026 | 15% |
+| Progress Presentation – 2 | 31 August – 02 September 2026 | 18% |
+| Final Presentation and Viva | 19 – 21 October 2026 | 40% |
+| Final Report Submission | 28 October 2026 | 21% |
 
 ---
 
-## 🏗️ Project Structure
+## 🎨 Website Style
 
-```text
-Lanka-Link-RP-Website/
-│
-├── static-site/              ← the website (upload everything inside this folder)
-│   ├── index.html            Home
-│   ├── domain.html           Domain
-│   ├── milestones.html       Milestones
-│   ├── documents.html        Documents
-│   ├── presentations.html    Presentations
-│   ├── about.html            About Us
-│   ├── contact.html          Contact Us
-│   │
-│   ├── css/
-│   │   └── style.css         the only stylesheet
-│   ├── images/               team and supervisor photos (.jpg)
-│   │   └── diagrams/         the six system diagrams (.png)
-│   ├── presentations/        slide decks (.pptx)
-│   ├── favicon.ico
-│   └── favicon.svg
-│
-├── README.md
-└── package.json
-```
+The Lanka-Link website is designed to be:
 
-All links between pages and to files are **relative** (`about.html`, `images/m1.jpg`, …), so the folder works from any location — on the course web, in a sub-folder, or opened straight from the disk.
+* modern
+* academic
+* attractive
+* easy to navigate
+* visually consistent
+* responsive on phone, tablet and desktop
+* suitable for a research presentation context
 
----
-
-## ▶️ Viewing the Website
-
-### Option 1 — open the file
-
-Open `static-site/index.html` in any browser (double-click it). No installation is needed.
-
-### Option 2 — a local web server
-
-To view it exactly as the course web will serve it:
-
-```bash
-python -m http.server 8080 --directory static-site
-```
-
-Then open <http://localhost:8080>. Stop the server with `Ctrl + C`.
-
----
-
-## ⬆️ Uploading to the Course Web
-
-1. Upload **everything inside** `static-site/` — the `.html` files and the `css/`, `images/` and `presentations/` folders.
-2. Keep the folder structure as it is — the pages refer to `css/style.css`, `images/…` and so on.
-3. The start page is `index.html`.
-
-Total size: **8.3 MB** of the 20 MB allowed.
-
----
-
-## ✏️ Updating the Content
-
-The pages are plain HTML, so content is edited directly in the `.html` files:
-
-| What to change | Where |
-| --- | --- |
-| Milestone dates and marks (currently "TBA") | `milestones.html` — both the drop-down panels and the timeline |
-| Document links (Google Drive) | `documents.html` — the `href` of the "Open" / "Download" buttons |
-| A new slide deck | put the file in `presentations/` and link it from `presentations.html` |
-| A member photo | put a `.jpg` in `images/` and use it in `about.html` |
-
-The **navigation bar and footer are repeated on every page** — when you change them, change all seven files.
-
-### How the interactive parts work without JavaScript
-
-| Feature | Done with |
-| --- | --- |
-| Phone menu (☰) | a hidden checkbox and its `<label>` — CSS shows the menu when it is checked |
-| Milestone drop-down | a CSS menu that opens on hover / tap; each assessment links to a `#panel`, and `:target` shows it |
-| Milestone filter (All / Completed / Upcoming) | radio buttons and their labels — CSS hides the other cards |
-| Contact form | a normal `<form action="mailto:…">` — the visitor's e-mail program sends the message |
+The home page especially focuses on presenting the project in a visually engaging way using a hero section, an “AI insights” preview, research component cards, result charts, capability cards, and a call to action.
 
 ---
 
 ## 🛠️ Built With
 
-* **HTML5** — the seven pages
-* **CSS3** — one stylesheet (`css/style.css`), responsive for phone, tablet and desktop
-* **Google Fonts** — Inter and Space Grotesk (the pages fall back to system fonts when offline)
+* **HTML**
+* **CSS**
 
-Dark navy theme with blue / green accents, a faint grid background and card-based layout. Every page shares the same header, navigation and footer.
-
----
-
-## 📱 Responsive Design
-
-Every page has been checked at phone width (375 px) and on desktop — nothing scrolls sideways, and on phones the navigation collapses into the ☰ menu.
+This is a static multi-page website built for research presentation purposes, following the SLIIT course-web guideline (*Technology allowed: WordPress, HTML, CSS* · *Disk space: maximum 20 MB*). It uses **no JavaScript** — the phone menu, the milestone drop-down and filter, and the contact form all work with plain HTML and CSS. The whole site is about **8.6 MB**.
 
 ---
 
-## 👥 Research Team
+## 📁 Website Files
 
-**R26-IT-139 · Sri Lanka Institute of Information Technology (SLIIT)**
+```text
+static-site/
+├── index.html            Home
+├── domain.html           Domain
+├── milestones.html       Milestones
+├── documents.html        Documents
+├── presentations.html    Presentations
+├── about.html            About Us
+├── contact.html          Contact Us
+├── css/style.css         the only stylesheet
+├── images/               team photos and system diagrams
+└── presentations/        presentation slide files
+```
+
+To view the website, open `static-site/index.html` in any browser. To publish it, upload everything inside `static-site/` to the course web.
+
+---
+
+## 📌 Purpose of This Repository
+
+This repository contains the source code for the **Lanka-Link Research Introduction Website**.
+
+It is used to:
+
+* maintain the project’s academic website
+* update research presentation content
+* manage page content and styling
+* present Lanka-Link professionally during evaluations and reviews
+
+---
+
+## 👥 Team
+
+**Lanka-Link Research Group**
+**SLIIT Final Year Research Project · R26-IT-139**
+**2025–2026**
 
 | Member | Student ID | Component |
 | --- | --- | --- |
@@ -155,8 +161,19 @@ Every page has been checked at phone width (375 px) and on desktop — nothing s
 **Supervisor:** Dr. Shanta Rajapaksha Yapa
 **Co-Supervisor:** Ms. Suwani Hettiarachchi
 
+**Team e-mail:** lankalink.team@gmail.com
+
+The website includes a dedicated About Us page with student roles, IDs, emails, and supervisor details.
+
 ---
 
-## 📄 License
+## 📚 Project Title
 
-Developed for **academic and educational purposes** as part of the IT4010 Research Project at SLIIT.
+**Lanka-Link**
+**Smart Merchant Support Platform for Agency Banking and Procurement**
+
+---
+
+## ⭐ Summary
+
+The **Lanka-Link Research Introduction Website** is a polished academic website that presents the vision, structure, progress, and people behind the Lanka-Link project. It serves as the main public presentation layer for the research and helps communicate the project clearly and professionally.
