@@ -188,7 +188,7 @@ export const presentations = [
     fileType: "PDF",
     actionLabel: "Open PDF",
     href: "/presentations/proposal.pdf",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link PP1",
@@ -200,7 +200,7 @@ export const presentations = [
     fileType: "PPT",
     actionLabel: "Open PPT",
     href: "/presentations/progress-1.pptx",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link PP2",
@@ -212,7 +212,7 @@ export const presentations = [
     fileType: "PPT",
     actionLabel: "Open PPT",
     href: "/presentations/progress-2.pptx",
-    available: false,
+    available: true,
   },
   {
     title: "Lanak Link Final",
@@ -224,7 +224,7 @@ export const presentations = [
     fileType: "Upcoming",
     actionLabel: "Open Folder",
     href: "/presentations/final.pdf",
-    available: false,
+    available: true, // TODO: Change to false if the final presentation is not yet available
   },
 ];
 export const contact = {
