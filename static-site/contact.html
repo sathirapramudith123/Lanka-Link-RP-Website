@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- always send the site address with links and forms: FormSubmit refuses a form without it -->
+  <meta name="referrer" content="origin">
   <title>Contact Us | Lanka-Link</title>
   <meta name="description" content="A digital platform with explainable machine learning for rural Sri Lankan micro-merchants">
   <link rel="icon" href="favicon.svg">
@@ -49,14 +51,19 @@
         </div>
         <div class="card">
           <h2>Send a Message</h2>
-          <p class="muted small">The form opens your e-mail program with the message, addressed to lankalink.team@gmail.com.</p>
-          <form class="form" action="mailto:lankalink.team@gmail.com?subject=Lanka-Link%20-%20Website%20message" method="post" enctype="text/plain">
+          <p class="muted small">Your message is delivered straight to the team inbox (lankalink.team@gmail.com).</p>
+          <!-- Sent by FormSubmit (formsubmit.co) — a plain HTML form, no JavaScript.
+               The first message sends an "Activate Form" e-mail to the team inbox; click it once. -->
+          <form class="form" action="https://formsubmit.co/lankalink.team@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Lanka-Link website — new message">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="grid g2">
-              <label>Your name<input type="text" name="Name" required></label>
-              <label>Your e-mail<input type="email" name="Email" required></label>
+              <label>Your name<input type="text" name="name" required></label>
+              <label>Your e-mail<input type="email" name="email" required></label>
             </div>
-            <label>Subject<select name="Subject"><option>General Inquiry</option><option>Collaboration</option><option>Feedback</option><option>Other</option></select></label>
-            <label>Message<textarea name="Message" rows="6" required></textarea></label>
+            <label>Subject<select name="topic"><option>General Inquiry</option><option>Collaboration</option><option>Feedback</option><option>Other</option></select></label>
+            <label>Message<textarea name="message" rows="6" required></textarea></label>
             <button type="submit" class="btn btn-primary">Send message</button>
           </form>
         </div>

@@ -342,6 +342,9 @@ blockquote {
 }
 .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
 
+/* spam trap: hidden from people, bots fill it in and FormSubmit drops the message */
+.honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
 /* ---------- footer ---------- */
 .site-footer { border-top: 1px solid var(--border); background: var(--bg-2); padding-top: 3.5rem; margin-top: 2rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
