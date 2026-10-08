@@ -1,469 +1,179 @@
-# <h1 align="center">🎓 Research Project Website</h1>
+# 🏪 Lanka-Link Research Introduction Website
 
-<p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-Website-black?style=for-the-badge&logo=next.js">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Developed-blue?style=for-the-badge&logo=typescript">
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-Styling-06B6D4?style=for-the-badge&logo=tailwindcss">
-  <img alt="React" src="https://img.shields.io/badge/React-UI-61DAFB?style=for-the-badge&logo=react">
-  <img alt="Research" src="https://img.shields.io/badge/Research-Final%20Year%20Project-purple?style=for-the-badge">
-</p>
+## Lanka-Link
 
-<p align="center">
-  <b>Research Project Website</b><br>
-  Academic Research Project Presentation & Information Platform
-</p>
+**Smart Merchant Support Platform for Agency Banking and Procurement**
 
 ---
 
 ## ✨ About This Website
 
-This website is the official **Research Project Website** developed to present and communicate the research project in a clear, modern, and professional format.
+This website is the official research introduction and presentation website for **Lanka-Link**. It is designed to present the project in a clear, modern, and professional way for lecturers, evaluators, supervisors, students, and other visitors.
 
-The website provides a centralized platform for presenting the research background, project scope, objectives, milestones, project-related resources, team information, and contact details.
-
-It is designed for **lecturers, supervisors, evaluators, students, and other visitors** who need to understand the research project and its progress.
-
-The website acts as the public-facing presentation layer of the research project and provides easy access to important project information and resources.
+The site introduces the research idea, explains the problem domain, showcases the four AI research components, presents project milestones and documents, and provides information about the team behind the project. Its purpose is to act as the public-facing academic website for the Lanka-Link research project.
 
 ---
 
 ## 🎯 Project Overview
 
-The **Research Project Website** is a modern academic web application developed using **Next.js, React, TypeScript, and Tailwind CSS**.
+**Lanka-Link** is a web and mobile platform for rural Sri Lankan micro-merchants (“kade” owners). It turns a shop’s day-to-day records — sales, stock, suppliers, purchases and agency-banking transactions — into one digital ledger, and builds four explainable machine-learning models on top of it.
 
-The main purpose of the system is to provide an organized and visually engaging platform for presenting the research project and its development progress.
+Each prediction is explained with **SHAP** in plain language, and every model is compared honestly with the simple rule a shop owner or bank would otherwise use. The platform is available in **English and Sinhala**.
 
-The website brings together important research information including:
-
-* Research project background
-* Research scope
-* Project objectives
-* Project milestones
-* Research-related downloads
-* Team member information
-* Contact information
-* Project updates and resources
-
-The application follows a component-based architecture to maintain a clean, reusable, and scalable codebase.
+This website highlights the main idea of the research and presents the project in a structured academic format.
 
 ---
 
 ## 🔍 What the Website Showcases
 
-The website presents the research project through several dedicated sections and pages.
+The Lanka-Link website presents:
 
-### 🏠 Home
-
-The Home page provides an introduction to the research project and acts as the main entry point for visitors.
-
-It highlights:
-
-* Project introduction
-* Research overview
-* Key information
-* Visual presentation
-* Navigation to important sections
+* a strong introduction to the research project
+* the main research domain and background
+* the four AI research components and their results
+* the system diagrams of the platform
+* project milestones, dates and marks
+* project documents and presentation materials
+* team member and supervisor information
+* contact details for the project
 
 ---
 
-### 🎯 Research Scope
+## 🧩 Core Research Components Featured
 
-The Scope page explains the research domain and the boundaries of the project.
+The website highlights the four Lanka-Link research components:
 
-It presents information such as:
+### 💳 Credit Readiness
 
-* Research background
-* Problem area
-* Research objectives
-* Project scope
-* Key areas covered by the research
-* Research direction
+Scores a shop from 0 to 100 using its own digital ledger — months active, cash flow, profit margin, digital payments and stock-out rate — and sets an explainable loan limit. Logistic regression, **ROC-AUC 0.839**, and better than standard bank rules (F1 0.75 vs 0.68).
 
----
+### 🛒 Smart Procurement (Buy Now / Wait)
 
-### 📅 Project Milestones
+Predicts whether an item’s market price will rise in the coming weeks and advises the shop owner to buy now or wait. Suppliers are ranked by items covered, price and distance. Random forest, saving about **2.2 %** of the purchase bill on unseen weeks.
 
-The Milestones page presents the academic and development progress of the research project.
+### 📦 Weekly Demand Forecast
 
-It can be used to showcase:
+Forecasts next week’s sales of every item, including Avurudu and festival effects, and turns the forecast into a reorder point with safety stock. Random forest, **21.7 %** lower error than “same as last week”.
 
-* Project phases
-* Assessment milestones
-* Research activities
-* Development progress
-* Important project dates
-* Academic progress
+### 🏦 Agency Banking Anomaly Detection
 
-This provides evaluators and supervisors with a clear overview of the project's development journey.
+Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input, cutting false alarms from **136 to 19** per 1,000 honest customers.
 
 ---
 
-### 📥 Downloads
+## 🖥️ Main Website Pages
 
-The Downloads page provides access to important project-related resources and documents.
+The website includes the following pages:
 
-These may include:
-
-* Research documents
-* Reports
-* Project resources
-* Supporting materials
-* Academic documents
-* Other downloadable files
-
-The page provides a centralized location for visitors to access project resources.
+* **Home** – project introduction, the four AI components, results and key capabilities
+* **Domain** – literature survey, research gap, research problem, objectives, methodology, system diagrams and technologies
+* **Milestones** – the five graded assessments with dates, marks and progress
+* **Documents** – project charter, proposal, check lists, research paper and thesis reports
+* **Presentations** – proposal and progress presentation slides
+* **About Us** – team member and supervisor details
+* **Contact Us** – project contact information and a message form
 
 ---
 
-### 👥 About
+## 📅 Assessment Milestones
 
-The About page provides information about the research team and the people involved in the project.
-
-It can include:
-
-* Team members
-* Student IDs
-* Student roles
-* Contact information
-* Supervisor information
-* Research project details
+| Assessment | Date | Marks |
+| --- | --- | --- |
+| Project Proposal | 15 – 18 March 2026 | 6% |
+| Progress Presentation – 1 | 11 – 13 May 2026 | 15% |
+| Progress Presentation – 2 | 31 August – 02 September 2026 | 18% |
+| Final Presentation and Viva | 19 – 21 October 2026 | 40% |
+| Final Report Submission | 28 October 2026 | 21% |
 
 ---
 
-### 📧 Contact
+## 🎨 Website Style
 
-The Contact page provides project-related contact information and allows visitors to find the appropriate communication channels for the research team.
+The Lanka-Link website is designed to be:
 
-It is designed to make communication regarding the research project simple and accessible.
+* modern
+* academic
+* attractive
+* easy to navigate
+* visually consistent
+* responsive on phone, tablet and desktop
+* suitable for a research presentation context
 
----
-
-## 🧩 Main Website Components
-
-The project uses reusable React components to maintain consistency throughout the application.
-
-### 🧭 Navigation Bar
-
-The `Navbar` component provides the main navigation system for moving between different pages of the research website.
-
-### 🦶 Footer
-
-The `Footer` component provides common footer information and navigation elements across the website.
-
-### 🎨 Hero Illustration
-
-The `HeroIllustration` component provides the main visual element used within the website's hero section.
-
-### 📑 Section Header
-
-The `SectionHeader` component provides a consistent heading and introduction style for different sections of the website.
-
-### 📐 Layout
-
-The `Layout` component helps maintain a consistent page structure and shared UI elements throughout the application.
-
----
-
-## 📄 Main Website Pages
-
-The project currently includes the following pages:
-
-| Page       | Route         | Description                           |
-| ---------- | ------------- | ------------------------------------- |
-| Home       | `/`           | Research project introduction         |
-| Scope      | `/scope`      | Research background and project scope |
-| Milestones | `/milestones` | Project progress and milestones       |
-| Downloads  | `/downloads`  | Project documents and resources       |
-| About      | `/about`      | Team and supervisor information       |
-| Contact    | `/contact`    | Project contact information           |
-
----
-
-## 🏗️ Project Structure
-
-```text
-RP-Website/
-│
-├── public/
-│
-├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   ├── contact/
-│   │   ├── downloads/
-│   │   ├── milestones/
-│   │   ├── scope/
-│   │   └── page.tsx
-│   │
-│   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   └── Layout.tsx
-│   │
-│   └── data/
-│       └── content.ts
-│
-├── package.json
-├── next.config.ts
-└── README.md
-```
+The home page especially focuses on presenting the project in a visually engaging way using a hero section, an “AI insights” preview, research component cards, result charts, capability cards, and a call to action.
 
 ---
 
 ## 🛠️ Built With
 
-The website is developed using the following technologies:
+* **HTML**
+* **CSS**
 
-### Frontend
-
-* **Next.js** – React framework for building the web application
-* **React** – Component-based user interface development
-* **TypeScript** – Type-safe application development
-* **Tailwind CSS** – Utility-first CSS framework
-* **CSS** – Custom styling and responsive design
-
-### Development Tools
-
-* **Node.js**
-* **npm**
-* **Visual Studio Code**
-* **ESLint**
-* **Git & GitHub**
+This is a static multi-page website built for research presentation purposes, following the SLIIT course-web guideline (*Technology allowed: WordPress, HTML, CSS* · *Disk space: maximum 20 MB*). It uses **no JavaScript** — the phone menu, the milestone drop-down and filter, and the contact form all work with plain HTML and CSS. The whole site is about **8.6 MB**.
 
 ---
 
-## ⚙️ Application Architecture
-
-The project follows the modern **Next.js App Router** structure.
+## 📁 Website Files
 
 ```text
-src/
-│
-├── app/
-│   ├── Page Routes
-│   ├── Global Layout
-│   └── Global Styles
-│
-├── components/
-│   └── Reusable UI Components
-│
-├── data/
-│   └── Website Content
-│
-└── utils/
-    └── Utility Functions
+static-site/
+├── index.html            Home
+├── domain.html           Domain
+├── milestones.html       Milestones
+├── documents.html        Documents
+├── presentations.html    Presentations
+├── about.html            About Us
+├── contact.html          Contact Us
+├── css/style.css         the only stylesheet
+├── images/               team photos and system diagrams
+└── presentations/        presentation slide files
 ```
 
-This structure separates pages, reusable components, content, and utility functions to improve maintainability and organization.
-
----
-
-## 🎨 Website Design
-
-The website is designed with an emphasis on:
-
-* Modern academic presentation
-* Clean user interface
-* Responsive design
-* Consistent visual hierarchy
-* Easy navigation
-* Reusable components
-* Professional research presentation
-
-The design is intended to provide a clear experience for both technical and non-technical visitors.
-
----
-
-## 📱 Responsive Design
-
-The website is designed to provide a responsive experience across different screen sizes, including:
-
-* 💻 Desktop
-* 🖥️ Laptop
-* 📱 Mobile
-* 📟 Tablet
-
-The interface adapts its layout and components according to the available screen size.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure the following software is installed:
-
-* Node.js
-* npm
-* Git
-
-You can verify the installations using:
-
-```bash
-node -v
-npm -v
-git --version
-```
-
----
-
-### 📥 Clone the Repository
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-```
-
-Navigate to the project directory:
-
-```bash
-cd RP-Website
-```
-
-Then navigate to the Next.js application:
-
-```bash
-cd rpwebsite
-```
-
----
-
-### 📦 Install Dependencies
-
-Run:
-
-```bash
-npm install
-```
-
-This installs all required project dependencies.
-
----
-
-### ▶️ Run the Development Server
-
-Start the Next.js development server:
-
-```bash
-npm run dev
-```
-
-The application will normally be available at:
-
-```text
-http://localhost:3000
-```
-
-Open the URL in your browser to view the research project website.
-
----
-
-## 🏗️ Build for Production
-
-To create a production build:
-
-```bash
-npm run build
-```
-
-After a successful build, start the production server using:
-
-```bash
-npm start
-```
-
----
-
-## 🧹 Code Quality
-
-The project uses ESLint to help maintain code quality and consistency.
-
-Run:
-
-```bash
-npm run lint
-```
-
-This checks the project source code for common issues and coding problems.
+To view the website, open `static-site/index.html` in any browser. To publish it, upload everything inside `static-site/` to the course web.
 
 ---
 
 ## 📌 Purpose of This Repository
 
-This repository contains the source code for the **Research Project Website**.
+This repository contains the source code for the **Lanka-Link Research Introduction Website**.
 
 It is used to:
 
-* Present the research project professionally
-* Maintain research-related website content
-* Showcase project scope and objectives
-* Track and present project milestones
-* Provide access to research documents
-* Present team and supervisor information
-* Provide project contact information
-* Support academic evaluations and presentations
+* maintain the project’s academic website
+* update research presentation content
+* manage page content and styling
+* present Lanka-Link professionally during evaluations and reviews
 
 ---
 
-## 🎓 Academic Context
+## 👥 Team
 
-This website has been developed as part of a **Final Year Research Project**.
+**Lanka-Link Research Group**
+**SLIIT Final Year Research Project · R26-IT-139**
+**2025–2026**
 
-It serves as the digital presentation platform for the research project and supports the communication of research activities, project progress, documentation, and team information.
+| Member | Student ID | Component |
+| --- | --- | --- |
+| Karunaweera L.M (Team Leader) | IT22050212 | Simulated Agency Banking |
+| Aponsu G.M.P.S | IT22266682 | Demand Forecast |
+| Pramudith K.G.S | IT22152978 | Inventory and Supplier Management |
+| Ruwani P.A.M.J | IT22268730 | Smart Procurement & Decision Support |
 
----
+**Supervisor:** Dr. Shanta Rajapaksha Yapa
+**Co-Supervisor:** Ms. Suwani Hettiarachchi
 
-## 👥 Research Team
+**Team e-mail:** lankalink.team@gmail.com
 
-**Research Project Group**
-**Sri Lanka Institute of Information Technology (SLIIT)**
-**Final Year Research Project**
-
-The website includes a dedicated **About** section containing information about the research team, student roles, and supervisor details.
-
----
-
-## 📚 Project Resources
-
-The website provides dedicated sections for project resources, including:
-
-* Research documentation
-* Project reports
-* Presentation materials
-* Project milestones
-* Research scope
-* Team information
-* Contact details
-
-These resources help provide a complete overview of the research project.
+The website includes a dedicated About Us page with student roles, IDs, emails, and supervisor details.
 
 ---
 
-## 🔮 Future Improvements
+## 📚 Project Title
 
-Potential future improvements include:
-
-* Online research progress tracking
-* Dynamic document management
-* Research news and updates
-* Interactive research visualizations
-* Enhanced accessibility
-* Improved mobile experience
-* Online presentation integration
-* Dynamic content management
-* Research analytics dashboard
+**Lanka-Link**
+**Smart Merchant Support Platform for Agency Banking and Procurement**
 
 ---
 
 ## ⭐ Summary
 
-The **Research Project Website** is a modern academic web application designed to present a final-year research project in a clear, organized, and professional manner.
-
-Built using **Next.js, React, TypeScript, and Tailwind CSS**, the website provides dedicated sections for the research scope, project milestones, downloadable resources, team information, and contact details.
-
-It serves as the central online presentation platform for the research project and helps communicate the project's **research direction, progress, resources, and team** to supervisors, evaluators, lecturers, students, and other visitors.
-
----
-
-## 📄 License
-
-This project is developed for **academic and educational purposes** as part of a final-year research project at SLIIT.
+The **Lanka-Link Research Introduction Website** is a polished academic website that presents the vision, structure, progress, and people behind the Lanka-Link project. It serves as the main public presentation layer for the research and helps communicate the project clearly and professionally.
