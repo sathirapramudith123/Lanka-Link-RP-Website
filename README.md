@@ -43,21 +43,21 @@ The Lanka-Link website presents:
 
 The website highlights the four Lanka-Link research components:
 
-### 💳 Credit Readiness
+### 🏦 Component 1 — Simulated Agency Banking
 
-Scores a shop from 0 to 100 using its own digital ledger — months active, cash flow, profit margin, digital payments and stock-out rate — and sets an explainable loan limit. Logistic regression, **ROC-AUC 0.839**, and better than standard bank rules (F1 0.75 vs 0.68).
+Simulates agency banking for customers — deposits, withdrawals and transfers with CBSL daily limits, float accounts per bank and a shared cash pool. Unusual transactions are flagged for the agent to verify with XGBoost and an Isolation Forest input, cutting false alarms from **136 to 19** per 1,000 honest customers.
 
-### 🛒 Smart Procurement (Buy Now / Wait)
+### 💳 Component 2 — Digital Ledger for Cash / Digital Sales, Expenses and Supplier Payments
 
-Predicts whether an item’s market price will rise in the coming weeks and advises the shop owner to buy now or wait. Suppliers are ranked by items covered, price and distance. Random forest, saving about **2.2 %** of the purchase bill on unseen weeks.
+Records every cash and digital sale, expense and supplier payment in one digital ledger (double-entry journal, financial reports). From the ledger, the shop gets a 0–100 credit-readiness score and an explainable loan limit. Logistic regression, **ROC-AUC 0.839**, better than standard bank rules (F1 0.75 vs 0.68).
 
-### 📦 Weekly Demand Forecast
+### 📦 Component 3 — Inventory and Supplier Management
 
-Forecasts next week’s sales of every item, including Avurudu and festival effects, and turns the forecast into a reorder point with safety stock. Random forest, **21.7 %** lower error than “same as last week”.
+Keeps stock in FIFO batches with low-stock alerts and manages suppliers with their items, prices and map routes. Next week’s sales of every item are forecast — including Avurudu and festival effects — and turned into a reorder point with safety stock. Random forest, **21.7 %** lower error than “same as last week”.
 
-### 🏦 Agency Banking Anomaly Detection
+### 🛒 Component 4 — Smart Procurement & Decision Support
 
-Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input, cutting false alarms from **136 to 19** per 1,000 honest customers.
+Builds purchase orders, ranks suppliers by items covered, price and distance, and uses market-price trends to advise the shop owner to buy now or wait. Random forest, saving about **2.2 %** of the purchase bill on unseen weeks.
 
 ---
 
@@ -154,7 +154,7 @@ It is used to:
 | Member | Student ID | Component |
 | --- | --- | --- |
 | Karunaweera L.M (Team Leader) | IT22050212 | Simulated Agency Banking |
-| Aponsu G.M.P.S | IT22266682 | Demand Forecast |
+| Aponsu G.M.P.S | IT22266682 | Digital Ledger for Cash / Digital Sales, Expenses and Supplier Payments |
 | Pramudith K.G.S | IT22152978 | Inventory and Supplier Management |
 | Ruwani P.A.M.J | IT22268730 | Smart Procurement & Decision Support |
 

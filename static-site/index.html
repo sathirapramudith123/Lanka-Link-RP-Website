@@ -87,28 +87,28 @@
           <p class="lead">Each component is one research question, one model and one honest comparison with the simple rule it replaces.</p></div>
         <div class="grid g2">
         <article class="card comp">
-          <div class="comp-head"><span class="code">C1</span><span class="tag">Classification</span></div>
-          <h3>💳 Credit Readiness</h3>
+          <div class="comp-head"><span class="code">C1</span><span class="tag">Anomaly Detection</span></div>
+          <h3>🏦 Simulated Agency Banking</h3>
+          <p>Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input.</p>
+          <p class="metric">False alarms cut from 136 to 19 per 1,000 customers</p>
+        </article>
+        <article class="card comp">
+          <div class="comp-head"><span class="code">C2</span><span class="tag">Classification</span></div>
+          <h3>💳 Digital Ledger for Cash / Digital Sales, Expenses and Supplier Payments</h3>
           <p>Scores a shop 0–100 from its digital ledger (months active, cash flow, margin, digital payments, stock-out rate) and sets a loan limit of 3.5 × monthly net cash flow. Logistic regression.</p>
           <p class="metric">ROC-AUC 0.839 · F1 0.75 vs 0.68 for bank rules</p>
         </article>
         <article class="card comp">
-          <div class="comp-head"><span class="code">C2</span><span class="tag">Classification + Regression</span></div>
-          <h3>📦 Smart Procurement (Buy now / Wait)</h3>
-          <p>Predicts whether an item’s market price will rise in the next 4 weeks and forecasts that price, adding “good price now / prices may improve” advice to each purchase. Random forest.</p>
-          <p class="metric">ROC-AUC 0.795 on future weeks · saves ≈ 2.2 % of the bill</p>
-        </article>
-        <article class="card comp">
           <div class="comp-head"><span class="code">C3</span><span class="tag">Time-series Forecasting</span></div>
-          <h3>📈 Weekly Demand Forecast</h3>
+          <h3>📈 Inventory and Supplier Management</h3>
           <p>Forecasts next week’s units per item, including Avurudu and festival effects; the forecast sets each item’s reorder point and safety stock. Random forest.</p>
           <p class="metric">21.7 % lower error than “same as last week” · 64 % after Avurudu</p>
         </article>
         <article class="card comp">
-          <div class="comp-head"><span class="code">C4</span><span class="tag">Anomaly Detection</span></div>
-          <h3>🏦 Agency Banking Anomaly Detection</h3>
-          <p>Flags unusual deposits, withdrawals and transfers for the agent to verify, while CBSL daily limits are enforced as hard blocks. XGBoost with an Isolation Forest input.</p>
-          <p class="metric">False alarms cut from 136 to 19 per 1,000 customers</p>
+          <div class="comp-head"><span class="code">C4</span><span class="tag">Classification + Regression</span></div>
+          <h3>📦 Smart Procurement &amp; Decision Support</h3>
+          <p>Predicts whether an item’s market price will rise in the next 4 weeks and forecasts that price, adding “good price now / prices may improve” advice to each purchase. Random forest.</p>
+          <p class="metric">ROC-AUC 0.795 on future weeks · saves ≈ 2.2 % of the bill</p>
         </article>
         </div>
       </div>
@@ -128,7 +128,16 @@
         <div class="grid g2">
         <article class="card result">
           <span class="code">C1</span>
-          <h3>Credit readiness</h3>
+          <h3>Simulated agency banking</h3>
+          <p class="muted small">False alarms per 1,000 honest customers · lower is better</p>
+            <div class="bar-row ours"><span>ML (threshold 0.87)</span><div class="bar"><i style="width:4%"></i></div><b>19</b></div>
+            <div class="bar-row"><span>ML (threshold 0.50)</span><div class="bar"><i style="width:23%"></i></div><b>136</b></div>
+            <div class="bar-row"><span>CBSL limit as a detector</span><div class="bar"><i style="width:100%"></i></div><b>579</b></div>
+          <p class="note">So CBSL limits are enforced as hard blocks, and the ML model is the detector.</p>
+        </article>
+        <article class="card result">
+          <span class="code">C2</span>
+          <h3>Digital ledger (credit readiness)</h3>
           <p class="muted small">F1 score (test set, 500 shops) · higher is better</p>
             <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:100%"></i></div><b>0.753</b></div>
             <div class="bar-row"><span>Bank rules</span><div class="bar"><i style="width:90%"></i></div><b>0.681</b></div>
@@ -136,17 +145,8 @@
           <p class="note">ML beats the bank rules by +0.071 F1 (95 % CI +0.024 to +0.122).</p>
         </article>
         <article class="card result">
-          <span class="code">C2</span>
-          <h3>Smart procurement</h3>
-          <p class="muted small">Money saved vs always buying now · higher is better</p>
-            <div class="bar-row"><span>Perfect foresight</span><div class="bar"><i style="width:100%"></i></div><b>3.31 %</b></div>
-            <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:68%"></i></div><b>2.25 %</b></div>
-            <div class="bar-row"><span>Rule: price fell</span><div class="bar"><i style="width:67%"></i></div><b>2.23 %</b></div>
-          <p class="note">Captures about two-thirds of the best possible saving on unseen future weeks.</p>
-        </article>
-        <article class="card result">
           <span class="code">C3</span>
-          <h3>Weekly demand forecast</h3>
+          <h3>Inventory and supplier management</h3>
           <p class="muted small">Mean absolute error (units / week) · lower is better</p>
             <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:77%"></i></div><b>10.89</b></div>
             <div class="bar-row"><span>Same as last week</span><div class="bar"><i style="width:98%"></i></div><b>13.90</b></div>
@@ -155,12 +155,12 @@
         </article>
         <article class="card result">
           <span class="code">C4</span>
-          <h3>Banking anomaly detection</h3>
-          <p class="muted small">False alarms per 1,000 honest customers · lower is better</p>
-            <div class="bar-row ours"><span>ML (threshold 0.87)</span><div class="bar"><i style="width:4%"></i></div><b>19</b></div>
-            <div class="bar-row"><span>ML (threshold 0.50)</span><div class="bar"><i style="width:23%"></i></div><b>136</b></div>
-            <div class="bar-row"><span>CBSL limit as a detector</span><div class="bar"><i style="width:100%"></i></div><b>579</b></div>
-          <p class="note">So CBSL limits are enforced as hard blocks, and the ML model is the detector.</p>
+          <h3>Smart procurement &amp; decision support</h3>
+          <p class="muted small">Money saved vs always buying now · higher is better</p>
+            <div class="bar-row"><span>Perfect foresight</span><div class="bar"><i style="width:100%"></i></div><b>3.31 %</b></div>
+            <div class="bar-row ours"><span>ML model</span><div class="bar"><i style="width:68%"></i></div><b>2.25 %</b></div>
+            <div class="bar-row"><span>Rule: price fell</span><div class="bar"><i style="width:67%"></i></div><b>2.23 %</b></div>
+          <p class="note">Captures about two-thirds of the best possible saving on unseen future weeks.</p>
         </article>
         </div>
       </div>
