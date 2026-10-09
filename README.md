@@ -67,7 +67,7 @@ The website includes the following pages:
 
 * **Home** – project introduction, the four AI components, results and key capabilities
 * **Domain** – literature survey, research gap, research problem, objectives, methodology, system diagrams and technologies
-* **Milestones** – the five graded assessments with dates, marks and progress
+* **Milestones** – the eight graded assessments with dates, marks, learning outcomes and progress
 * **Documents** – project charter, proposal, check lists, research paper and thesis reports
 * **Presentations** – proposal and progress presentation slides
 * **About Us** – team member and supervisor details
@@ -77,13 +77,17 @@ The website includes the following pages:
 
 ## 📅 Assessment Milestones
 
-| Assessment | Date | Marks |
-| --- | --- | --- |
-| Project Proposal | 15 – 18 March 2026 | 6% |
-| Progress Presentation – 1 | 11 – 13 May 2026 | 15% |
-| Progress Presentation – 2 | 31 August – 02 September 2026 | 18% |
-| Final Presentation and Viva | 19 – 21 October 2026 | 40% |
-| Final Report Submission | 28 October 2026 | 21% |
+| Assessment | Date | Marks | Learning outcomes |
+| --- | --- | --- | --- |
+| Proposal Presentation & Report | 15 – 18 March 2026 | 12% | LO1 – LO5 |
+| Progress Presentation I | 11 – 13 May 2026 | 15% | LO1 – LO5 |
+| Progress Presentation II | 31 August – 02 September 2026 | 18% | LO1 – LO5 |
+| Final Presentation and VIVA | 19 – 21 October 2026 | 20% | LO1 – LO5 |
+| Final Report | 28 October 2026 | 19% | LO1 – LO5 |
+| Research Paper (published) | 23 October 2026 | 10% | LO1 – LO4 |
+| Website | 11 – 21 October 2026 | 2% | LO4 |
+| Research Logbook, Status Document 1 & 2 | 19 – 21 October 2026 | 4% | LO4 |
+| **Total** | | **100%** | |
 
 ---
 
