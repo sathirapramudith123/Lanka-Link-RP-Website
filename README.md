@@ -12,6 +12,7 @@ This website is the official research introduction and presentation website for 
 
 The site introduces the research idea, explains the problem domain, showcases the four AI research components, presents project milestones and documents, and provides information about the team behind the project. Its purpose is to act as the public-facing academic website for the Lanka-Link research project.
 
+website link -> https://lanka-link-reasearch.netlify.app/
 ---
 
 ## 🎯 Project Overview
