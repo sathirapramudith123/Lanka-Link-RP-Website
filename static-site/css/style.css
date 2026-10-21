@@ -261,6 +261,11 @@ blockquote {
 .ticks { list-style: none; display: grid; gap: 0.35rem; }
 .ticks li { color: var(--muted); padding-left: 1.4rem; position: relative; font-size: 0.93rem; }
 .ticks li::before { content: "›"; position: absolute; left: 0.3rem; color: var(--blue); font-weight: 700; }
+.prose strong { color: var(--text); }
+.prose .ticks { margin: 0 0 1rem; padding: 0; }
+.lit-head { margin-top: 2rem; }
+.refs { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
+.refs li { color: var(--muted); font-size: 0.85rem; line-height: 1.5; padding-left: 2.2rem; text-indent: -2.2rem; }
 
 /* milestone drop-down: CSS menu (hover / tap) + :target panels */
 .ms-dropdown { position: relative; outline: none; }

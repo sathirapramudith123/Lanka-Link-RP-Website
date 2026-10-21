@@ -43,7 +43,45 @@
     <section id="literature-survey" class="section">
       <div class="container split">
         <div class="split-head"><span class="num">01</span><h2>Literature Survey</h2></div>
-        <div class="prose"><p>Earlier work shows that alternative data — transaction histories, cash flow and digital-payment activity — can predict the credit-worthiness of “thin-file” small businesses that have no formal credit history. Retail studies apply machine learning to sales forecasting and inventory control, and commodity-price forecasting is widely used to time purchases. In digital finance, fraud and anomaly detection is commonly studied on simulated mobile-money data such as PaySim.</p><p>Explainable AI methods such as SHAP make individual predictions understandable, which is essential when the users are not data experts. Most existing solutions, however, treat each of these problems separately, target banks or large retailers rather than the shop owner, and are often evaluated with random splits that overstate results on time-ordered data. The full list of references is in the research proposal.</p></div>
+        <div class="prose">
+          <p>Village shops are the everyday point of commerce in rural Sri Lanka. They sell groceries on credit and for cash, increasingly accept digital payments, and in many villages act as the nearest point of access to a bank through agency banking, in which a merchant performs deposits and withdrawals on behalf of a bank [1]. Yet most of these micro-merchants still keep records in exercise books [2]. Without records they cannot see their profit, control stock or show a lender that they are creditworthy; globally, a large share of micro and small enterprises are credit constrained [3], and many adults still depend on cash and on agents for financial services [4].</p>
+          <p>Machine-learning results reported in student and applied projects are often optimistic because of random splits on time-ordered data, target leakage and the absence of simple baselines [5], [6]. A second aim of this work was therefore to evaluate every model honestly: against the rule a merchant or bank would otherwise use, on data the model has not seen, with bootstrap confidence intervals [7]. The contributions are:</p>
+          <ul class="ticks">
+            <li>an integrated, bilingual (English and Sinhala) web and Android platform in which banking, ledger, inventory and procurement data flow into each other automatically;</li>
+            <li>four explainable models — banking anomalies, credit readiness, weekly demand and procurement timing — each compared with rule-based baselines under a common evaluation protocol;</li>
+            <li>evidence of where machine learning adds value and where it does not, including two corrected over-estimates caused by leakage and random splitting.</li>
+          </ul>
+
+          <h3 class="lit-head">Related work</h3>
+          <p><strong>Agency banking and anomaly detection.</strong> Branchless banking through retail agents extends financial services to unbanked areas but exposes agents to fraud and cash-management risk [1]. Public data on mobile-money fraud are scarce; the PaySim simulator generates realistic synthetic transactions for this purpose [8]. Gradient-boosted trees [9] and unsupervised detectors such as the Isolation Forest [10] are common, and for rare positives the precision–recall curve is more informative than ROC [11].</p>
+          <p><strong>Credit scoring from alternative data.</strong> Credit scoring traditionally uses scorecards built with logistic regression [12]; large benchmarks show that newer classifiers sometimes improve on it, but the gains must be judged against business value [13]. Digital footprints and transaction records can predict default for applicants without a credit history [14].</p>
+          <p><strong>Retail demand forecasting.</strong> Reviews of retail forecasting highlight calendar events and prices as key drivers [15], and the M5 competition showed that global tree-based models trained across many series outperform statistical benchmarks [16]. Forecasts should be compared with naive benchmarks and evaluated on later periods with time-based cross-validation [17], [6]. A reorder point that adds safety stock for the forecast error over the lead time is the standard way to turn a forecast into an ordering rule [18].</p>
+          <p><strong>Procurement.</strong> Supplier selection is a multi-criteria decision in which price, delivery and availability dominate [19]. Timing purchases by market prices is a forecasting problem in which simple momentum rules are strong baselines [17]. Few works combine these with small-shop inventory and ledger data.</p>
+          <p>To our knowledge no prior system combines agency banking, bookkeeping, inventory and procurement for rural micro-merchants with models evaluated against the rules they replace.</p>
+
+          <h3 class="lit-head">References</h3>
+          <ol class="refs">
+            <li>[1] G. Ivatury and I. Mas, “The early experience with branchless banking,” CGAP, Washington, DC, USA, Focus Note 46, 2008.</li>
+            <li>[2] S. Balagobei, “Impact of record keeping practices on business performance of small and medium scale enterprises in Sri Lanka,” <em>Int. J. Accounting and Financial Reporting</em>, vol. 9, no. 4, 2019.</li>
+            <li>[3] M. Bruhn, M. Hommes, M. Khanna, S. Singh, A. Sorokina and J. S. Wimpey, <em>MSME Finance Gap: Assessment of the Shortfalls and Opportunities in Financing Micro, Small and Medium Enterprises in Emerging Markets</em>. Washington, DC, USA: International Finance Corporation, 2017.</li>
+            <li>[4] A. Demirgüç-Kunt, L. Klapper, D. Singer and S. Ansar, <em>The Global Findex Database 2021: Financial Inclusion, Digital Payments, and Resilience in the Age of COVID-19</em>. Washington, DC, USA: World Bank, 2022.</li>
+            <li>[5] S. Kaufman, S. Rosset, C. Perlich and O. Stitelman, “Leakage in data mining: Formulation, detection, and avoidance,” <em>ACM Trans. Knowledge Discovery from Data</em>, vol. 6, no. 4, Art. no. 15, 2012.</li>
+            <li>[6] C. Bergmeir and J. M. Benítez, “On the use of cross-validation for time series predictor evaluation,” <em>Information Sciences</em>, vol. 191, pp. 192–213, 2012.</li>
+            <li>[7] B. Efron and R. J. Tibshirani, <em>An Introduction to the Bootstrap</em>. New York, NY, USA: Chapman &amp; Hall/CRC, 1993.</li>
+            <li>[8] E. A. Lopez-Rojas, A. Elmir and S. Axelsson, “PaySim: A financial mobile money simulator for fraud detection,” in <em>Proc. 28th European Modeling and Simulation Symp. (EMSS)</em>, Larnaca, Cyprus, 2016.</li>
+            <li>[9] T. Chen and C. Guestrin, “XGBoost: A scalable tree boosting system,” in <em>Proc. 22nd ACM SIGKDD Int. Conf. Knowledge Discovery and Data Mining</em>, 2016, pp. 785–794.</li>
+            <li>[10] F. T. Liu, K. M. Ting and Z.-H. Zhou, “Isolation forest,” in <em>Proc. 8th IEEE Int. Conf. Data Mining (ICDM)</em>, Pisa, Italy, 2008, pp. 413–422.</li>
+            <li>[11] T. Saito and M. Rehmsmeier, “The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets,” <em>PLoS ONE</em>, vol. 10, no. 3, Art. no. e0118432, 2015.</li>
+            <li>[12] L. C. Thomas, J. N. Crook and D. B. Edelman, <em>Credit Scoring and Its Applications</em>, 2nd ed. Philadelphia, PA, USA: SIAM, 2017.</li>
+            <li>[13] S. Lessmann, B. Baesens, H.-V. Seow and L. C. Thomas, “Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research,” <em>European J. Operational Research</em>, vol. 247, no. 1, pp. 124–136, 2015.</li>
+            <li>[14] T. Berg, V. Burg, A. Gombović and M. Puri, “On the rise of FinTechs: Credit scoring using digital footprints,” <em>Review of Financial Studies</em>, vol. 33, no. 7, pp. 2845–2897, 2020.</li>
+            <li>[15] R. Fildes, S. Ma and S. Kolassa, “Retail forecasting: Research and practice,” <em>Int. J. Forecasting</em>, vol. 38, no. 4, pp. 1283–1318, 2022.</li>
+            <li>[16] S. Makridakis, E. Spiliotis and V. Assimakopoulos, “M5 accuracy competition: Results, findings, and conclusions,” <em>Int. J. Forecasting</em>, vol. 38, no. 4, pp. 1346–1364, 2022.</li>
+            <li>[17] R. J. Hyndman and G. Athanasopoulos, <em>Forecasting: Principles and Practice</em>, 3rd ed. Melbourne, Australia: OTexts, 2021.</li>
+            <li>[18] E. A. Silver, D. F. Pyke and D. J. Thomas, <em>Inventory and Production Management in Supply Chains</em>, 4th ed. Boca Raton, FL, USA: CRC Press, 2016.</li>
+            <li>[19] C. A. Weber, J. R. Current and W. C. Benton, “Vendor selection criteria and methods,” <em>European J. Operational Research</em>, vol. 50, no. 1, pp. 2–18, 1991.</li>
+          </ol>
+        </div>
       </div>
     </section>
     <section id="research-gap" class="section alt">
